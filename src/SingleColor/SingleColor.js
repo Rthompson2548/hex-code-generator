@@ -41,19 +41,27 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
       style={{ backgroundColor: `rgb(${bcg})` }}
       onClick={handleCopiedToClipboard}
     >
+      {/* rest */}
       <div className="single-color-container-text">
 
-        <p className="color-value hex-code-value">{hexCodeValue}</p>
-        
-
+        <p className="color-value hex-code-value">
+          {hexCodeValue}
+        </p>    
         <p className="percent-value">
           {weight}%
         </p>
-
       
-        
-      {copiedToClipboard && <p className='copied-to-clipboard' 	Peter McKee>Copied to clipboard
-      </p>}
+        {copiedToClipboard &&
+          <p className='copied-to-clipboard' Peter McKee>
+            Copied to clipboard
+        </p>}
+      
+      </div>
+
+      {/* clipboard icon */}
+      <div className='clipboard-icon'>
+        <i class="fa fa-paperclip" style={{ fontSize: "18px" }}>
+        </i>
       </div>
 
     </div>

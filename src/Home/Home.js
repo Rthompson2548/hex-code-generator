@@ -22,18 +22,18 @@ const Home = ({ handleSubmitX, handleSubmitY, hexCode, hexCodeList, handleHexCod
                 id="hex-code"
                 value={hexCode}
                 onChange={handleHexCodeState}
-                placeholder='#ff0000'
+                placeholder='#f15205'
           >
           </input>
       
           <div className="generate-buttons">
             {/* generates 20 colors */}
-            <button className='hex-code-submit-button' onClick={handleSubmitX}>
+            <button className='twenty' onClick={handleSubmitX}>
               Generate 20 colors
             </button>
 
             {/* generates 40 colors */}
-            <button className='hex-code-submit-button' onClick={handleSubmitY}>
+            <button className='forty' onClick={handleSubmitY}>
               Generate 40 colors
             </button>
          </div>

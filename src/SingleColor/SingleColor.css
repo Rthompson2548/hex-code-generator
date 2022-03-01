@@ -1,7 +1,13 @@
+
+
 .single-color-container {
    height: 125px;
    border-radius: 5px;
    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   /* align-items: stretch; */
 }
 
 .single-color-container-text {
@@ -15,6 +21,16 @@
 
 .copied-to-clipboard {
     color: #fff !important;
+}
+
+.clipboard-icon {
+    /* moves clipboard to bottom right of container */
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.color-light {
+    color: #fff;
 }
 
 .hex-code-value {

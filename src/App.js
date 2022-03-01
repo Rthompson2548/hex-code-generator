@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Home from './Home/Home';
-// import SingleColor from './SingleColor';
 import Values from 'values.js';
 import "./index.css";
 import "./App.css";
@@ -10,10 +9,10 @@ function App() {
    /** holds the state of the users hex code input */
   const [hexCode, setHexCode] = useState("");
   /** holds the state of all colors generated from the hex code input & sets an initial value for initial render */
-  const [hexCodeList, setHexCodeList] = useState(new Values("#ff0000").all(5));
+  const [hexCodeList, setHexCodeList] = useState(new Values("#f15205").all(5));
 
   const [error, setError] = useState(false);
-  const [hexColorList, setHexColorList] = useState(new Values("#f15025").all(5));
+ 
 
   const handleHexCodeState = (event) => {
     event.preventDefault();
