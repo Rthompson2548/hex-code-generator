@@ -1,0 +1,39 @@
+.single-color-container {
+   height: 125px;
+}
+
+.single-color-container-text {
+    text-transform: uppercase;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    letter-spacing: 0.75px;
+}
+
+.hex-code-value {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+@media (min-width: 620px) {
+    .single-color-container {
+        height: 175px;
+    }
+
+}
+
+@media (min-width: 820px) {
+    .single-color-container {
+       height: 200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .single-color-container {
+        /* padding: 20px; */
+    }
+}
+
+
+
