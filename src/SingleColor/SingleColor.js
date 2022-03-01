@@ -34,6 +34,8 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
 
   }, [copiedToClipboard])
 
+
+
   return (
     <div
       /** converts text color to white when colors reach a certain darkness */
@@ -52,16 +54,19 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
         </p>
       
         {copiedToClipboard &&
-          <p className='copied-to-clipboard' Peter McKee>
-            Copied to clipboard
-        </p>}
+          <i class="fa-solid fa-message">
+           Copied
+          </i>
+          }
       
       </div>
 
       {/* clipboard icon */}
       <div className='clipboard-icon'>
-        <i class="fa fa-paperclip" style={{ fontSize: "18px" }}>
-        </i>
+        
+          <i class="fa fa-paperclip" style={{ fontSize: "18px" }}>
+          </i>
+    
       </div>
 
     </div>

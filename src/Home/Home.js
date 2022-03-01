@@ -15,7 +15,7 @@ const Home = ({ handleSubmitX, handleSubmitY, hexCode, hexCodeList, handleHexCod
         <div className='generate-hex-code'>
      
          
-          <label id="hex-code">Enter a hex code</label>
+          <label id="hex-code">Enter a color or code</label>
             
           <input
                 type="text"
