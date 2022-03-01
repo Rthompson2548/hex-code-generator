@@ -3,16 +3,19 @@ import SingleColor from '../SingleColor/SingleColor';
 // import Values from 'values.js';
 import "./Home.css";
 
-const Home = ({ handleSubmit, hexCode, hexCodeList, handleHexCodeState, error }) => {
+const Home = ({ handleSubmitX, handleSubmitY, hexCode, hexCodeList, handleHexCodeState }) => {
   return (
     <div className='home-container'>
-        <h2 className='hex-code-title'>HEX CODE GENERATOR</h2>
-          
-        <form className="hex-code-form" onSubmit={handleSubmit}>
+      <div className='hex-code-header'>
+        <h2 className='hex-code-title'>HEX PALETTE GENERATOR</h2>
+        <h4 className='hex-code-description'>Generate analogous colors</h4>
+      </div>
+        <form className="hex-code-form">
               
         <div className='generate-hex-code'>
      
-          <label id="hex-code">Enter a hex code to generate a color palette</label>
+         
+          <label id="hex-code">Enter a hex code</label>
             
           <input
                 type="text"
@@ -20,12 +23,20 @@ const Home = ({ handleSubmit, hexCode, hexCodeList, handleHexCodeState, error })
                 value={hexCode}
                 onChange={handleHexCodeState}
                 placeholder='#ff0000'
-                className={`${error ? error : null}`}>
+          >
           </input>
       
-          <button  className='hex-code-submit-button'>
-            GENERATE COLORS
-          </button>
+          <div className="generate-buttons">
+            {/* generates 20 colors */}
+            <button className='hex-code-submit-button' onClick={handleSubmitX}>
+              Generate 20 colors
+            </button>
+
+            {/* generates 40 colors */}
+            <button className='hex-code-submit-button' onClick={handleSubmitY}>
+              Generate 40 colors
+            </button>
+         </div>
 
             
        

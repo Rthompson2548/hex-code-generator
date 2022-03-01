@@ -21,7 +21,7 @@ function App() {
     console.log(`current hex code value: ${hexCode}`);
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmitX = (event) => {
     event.preventDefault();
 
     try {
@@ -44,10 +44,34 @@ function App() {
     
   }
 
+    const handleSubmitY = (event) => {
+    event.preventDefault();
+
+    try {
+
+      let hexCodes = new Values(hexCode).all(5);
+
+      hexCodes.forEach((hex, index) => {
+        console.log(`hex code ${index + 1}: ${Object.entries(hex)}`);
+      })
+
+      /** console.log(`hex codes: ${JSON.stringify(hexCodes)}`); */
+      setHexCodeList(hexCodes);
+      setError(false);
+    }
+
+    catch (error) {
+      setError(true);
+      console.log(error);
+    }
+    
+  }
+
   return (
     <div className='App-container'>
       <Home
-        handleSubmit={handleSubmit}
+        handleSubmitX={handleSubmitX} 
+        handleSubmitY={handleSubmitY}
         hexCode={hexCode}
         hexCodeList={hexCodeList}
         handleHexCodeState={handleHexCodeState}
