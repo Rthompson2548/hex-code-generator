@@ -10,7 +10,7 @@ function App() {
    /** holds the state of the users hex code input */
   const [hexCode, setHexCode] = useState("");
   /** holds the state of all colors generated from the hex code input & sets an initial value for initial render */
-  const [hexCodeList, setHexCodeList] = useState(new Values("#f15025").all(5));
+  const [hexCodeList, setHexCodeList] = useState(new Values("#ff0000").all(5));
 
   const [error, setError] = useState(false);
   const [hexColorList, setHexColorList] = useState(new Values("#f15025").all(5));

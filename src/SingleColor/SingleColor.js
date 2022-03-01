@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import rgbToHex from "../utils.js"
 import "./SingleColor.css";
 
+
+
+
 /** using elements from colors data as props */
 const SingleColor = ({ rgb, weight, index, hexCode }) => {
 
@@ -41,12 +44,18 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
       <div className="single-color-container-text">
 
         <p className="color-value hex-code-value">{hexCodeValue}</p>
+        
+
         <p className="percent-value">
           {weight}%
         </p>
-      {copiedToClipboard && <p className='copied-to-clipboard'>Copied to clipboard
+
+      
+        
+      {copiedToClipboard && <p className='copied-to-clipboard' 	Peter McKee>Copied to clipboard
       </p>}
-        </div>
+      </div>
+
     </div>
   )
 

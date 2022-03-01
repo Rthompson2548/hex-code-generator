@@ -6,25 +6,25 @@ import "./Home.css";
 const Home = ({ handleSubmit, hexCode, hexCodeList, handleHexCodeState, error }) => {
   return (
     <div className='home-container'>
-        <h2 className='hex-code-title'>HEX PALETTE GENERATOR</h2>
+        <h2 className='hex-code-title'>HEX CODE GENERATOR</h2>
           
         <form className="hex-code-form" onSubmit={handleSubmit}>
               
         <div className='generate-hex-code'>
      
-          <label id="hex-code">Enter a hex code</label>
+          <label id="hex-code">Enter a hex code to generate a color palette</label>
             
           <input
                 type="text"
                 id="hex-code"
                 value={hexCode}
                 onChange={handleHexCodeState}
-                placeholder='#f15025'
+                placeholder='#ff0000'
                 className={`${error ? error : null}`}>
           </input>
       
           <button  className='hex-code-submit-button'>
-            GENERATE PALETTE
+            GENERATE COLORS
           </button>
 
             
