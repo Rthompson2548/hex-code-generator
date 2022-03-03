@@ -1,24 +1,23 @@
 import React /** , { useState } */ from 'react';
-
-const DefaultColors = ({ defaultColors }) => {
+import "./DefaultColors.css"
+const DefaultColors = ({ defaultColors, handleDefaultColorClick }) => {
     
-    const handleDefaultColorClick = (event) => {
-
-        event.preventDefault();
-
-        
-
-    }
-
     return (
         <div>
             <p>Default Colors</p>
 
+            {/* WORKS */}
             <ul className="default-colors">
                 {
                     defaultColors.map((color, index) => {
-                        return <li key={index}>
-                            <button value={color.code}>{color.name}</button>
+                        return <li key={index} className='default-color'>
+                            <button
+                                
+                                /** sets value to the hex code for the color */
+                                value={color.code}
+                                onClick={handleDefaultColorClick}>
+                                    {color.name}
+                            </button>
                         </li>
                          
                     })

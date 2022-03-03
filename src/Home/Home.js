@@ -4,7 +4,7 @@ import SingleColor from '../SingleColor/SingleColor';
 import "./Home.css";
 import DefaultColors from '../DefaultColors/DefaultColors';
 
-const Home = ({ handleSubmitX, handleSubmitY, hexCode, hexCodeList, handleHexCodeState, defaultColors, defaultColorButtons }) => {
+const Home = ({ handleSubmitX, handleSubmitY, hexCode, hexCodeList, handleHexCodeState, defaultColors, defaultColor }) => {
   return (
     <div className='home-container'>
       <div className='hex-code-header'>
@@ -47,7 +47,10 @@ const Home = ({ handleSubmitX, handleSubmitY, hexCode, hexCodeList, handleHexCod
 
             <div className="color-option-buttons">
               
-              <DefaultColors defaultColors={defaultColors} />
+              <DefaultColors
+                defaultColors={defaultColors}
+                defaultColor={defaultColor}
+              />
 
             </div>
 
@@ -56,7 +59,7 @@ const Home = ({ handleSubmitX, handleSubmitY, hexCode, hexCodeList, handleHexCod
         
           
 
-            
+           
        
         </div>
 

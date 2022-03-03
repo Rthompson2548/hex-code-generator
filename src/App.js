@@ -13,12 +13,11 @@ function App() {
 
   const [error, setError] = useState(false);
 
-  // /** array of objects containing default colors that user can select */
-   /** array of objects containing default colors that user can select */
+  /** array of objects containing default colors that user can select */
   const defaultColors = [
     {
       name: "Red",
-      code: "#ff0000",
+      code: "#FF0000",
     },
     {
       name: "Orange",
@@ -52,7 +51,6 @@ function App() {
       name: "White",
       code: "#ffffff",
     },
-
   ];
  
   const handleHexCodeState = (event) => {
@@ -65,14 +63,7 @@ function App() {
     event.preventDefault();
 
     try {
-
       let hexCodes = new Values(hexCode).all(10);
-
-      hexCodes.forEach((hex, index) => {
-        console.log(`hex code ${index + 1}: ${Object.entries(hex)}`);
-      })
-
-      /** console.log(`hex codes: ${JSON.stringify(hexCodes)}`); */
       setHexCodeList(hexCodes);
       setError(false);
     }
@@ -92,10 +83,8 @@ function App() {
       let hexCodes = new Values(hexCode).all(5);
 
       hexCodes.forEach((hex, index) => {
-        console.log(`hex code ${index + 1}: ${Object.entries(hex)}`);
       })
 
-      /** console.log(`hex codes: ${JSON.stringify(hexCodes)}`); */
       setHexCodeList(hexCodes);
       setError(false);
     }
@@ -115,10 +104,9 @@ function App() {
         hexCode={hexCode}
         hexCodeList={hexCodeList}
         handleHexCodeState={handleHexCodeState}
-        // defaultColors={defaultColors}
-        // defaultColorButtons={defaultColorButtons}
         error={error}
         defaultColors={defaultColors}
+       
       />
     </div>
   )
