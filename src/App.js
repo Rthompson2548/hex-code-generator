@@ -12,8 +12,49 @@ function App() {
   const [hexCodeList, setHexCodeList] = useState(new Values("#ff0000").all(5));
 
   const [error, setError] = useState(false);
- 
 
+  // /** array of objects containing default colors that user can select */
+   /** array of objects containing default colors that user can select */
+  const defaultColors = [
+    {
+      name: "Red",
+      code: "#ff0000",
+    },
+    {
+      name: "Orange",
+      code: "#ffa500",
+    },
+    {
+      name: "Yellow",
+      code: "#FFFF00",
+    },
+    {
+      name: "Green",
+      code: "#008000",
+    },
+    {
+      name: "Blue",
+      code: "#0000FF",
+    },
+    {
+      name: "Purple",
+      code: "#800080",
+    },
+    {
+      name: "Pink",
+      code: "#FFC0CB",
+    },
+    {
+      name: "Black",
+      code: "#000000",
+    },
+    {
+      name: "White",
+      code: "#ffffff",
+    },
+
+  ];
+ 
   const handleHexCodeState = (event) => {
     event.preventDefault();
     setHexCode(event.target.value);
@@ -74,7 +115,10 @@ function App() {
         hexCode={hexCode}
         hexCodeList={hexCodeList}
         handleHexCodeState={handleHexCodeState}
+        // defaultColors={defaultColors}
+        // defaultColorButtons={defaultColorButtons}
         error={error}
+        defaultColors={defaultColors}
       />
     </div>
   )

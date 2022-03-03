@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import rgbToHex from "../utils.js"
+// import rgbToHex from "../utils.js"
 import "./SingleColor.css";
 
 
@@ -11,9 +11,9 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
   const [copiedToClipboard, setCopiedToClipboard] = useState(false);
   /** uses .join() to render as (r, g, b) */
   const bcg = rgb.join(",");
-  console.log(`bcg: ${bcg}`);
+  // console.log(`bcg: ${bcg}`);
 
-  const hex = rgbToHex(...rgb);
+  // const hex = rgbToHex(...rgb);
 
   const hexCodeValue = `#${hexCode}`;
 
@@ -64,7 +64,7 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
       {/* clipboard icon */}
       <div className='clipboard-icon'>
         
-          <i class="fa fa-paperclip" style={{ fontSize: "18px" }}>
+          <i className="fa fa-paperclip" style={{ fontSize: "18px" }}>
           </i>
     
       </div>

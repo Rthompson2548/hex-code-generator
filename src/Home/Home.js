@@ -2,8 +2,9 @@ import React /** , { useState } */ from 'react';
 import SingleColor from '../SingleColor/SingleColor';
 // import Values from 'values.js';
 import "./Home.css";
+import DefaultColors from '../DefaultColors/DefaultColors';
 
-const Home = ({ handleSubmitX, handleSubmitY, hexCode, hexCodeList, handleHexCodeState }) => {
+const Home = ({ handleSubmitX, handleSubmitY, hexCode, hexCodeList, handleHexCodeState, defaultColors, defaultColorButtons }) => {
   return (
     <div className='home-container'>
       <div className='hex-code-header'>
@@ -36,7 +37,24 @@ const Home = ({ handleSubmitX, handleSubmitY, hexCode, hexCodeList, handleHexCod
             <button className='forty' onClick={handleSubmitY}>
               Generate 40 colors
             </button>
-         </div>
+          </div>
+          
+          
+          {/* buttons for default color options */}
+          <div className="color-options">
+            
+            <h3>Choose from color options</h3>
+
+            <div className="color-option-buttons">
+              
+              <DefaultColors defaultColors={defaultColors} />
+
+            </div>
+
+          </div>
+
+        
+          
 
             
        
