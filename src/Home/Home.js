@@ -43,7 +43,7 @@ const Home = ({ handleSubmitX, handleSubmitY, hexCode, hexCodeList, handleHexCod
           {/* buttons for default color options */}
           <div className="color-options">
             
-            <h3>Choose from color options</h3>
+            {/* <h3>Choose from color options</h3>
 
             <div className="color-option-buttons">
               
@@ -52,14 +52,9 @@ const Home = ({ handleSubmitX, handleSubmitY, hexCode, hexCodeList, handleHexCod
                 defaultColor={defaultColor}
               />
 
-            </div>
+            </div> */}
 
           </div>
-
-        
-          
-
-           
        
         </div>
 
