@@ -100,7 +100,7 @@ function App() {
     <div className='App-container'>
       <Home
         handleSubmitX={handleSubmitX} 
-        handleSubmitY={handleSubmitY}
+        // handleSubmitY={handleSubmitY}
         hexCode={hexCode}
         hexCodeList={hexCodeList}
         handleHexCodeState={handleHexCodeState}
