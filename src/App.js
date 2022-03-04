@@ -53,10 +53,8 @@ function App() {
     },
   ];
  
-  /** sets state of hex code, which is a string that holds the hex code */
   const handleHexCodeState = (event) => {
     event.preventDefault();
-    /** sets the state of the hex code from the value provided in the input */
     setHexCode(event.target.value);
     console.log(`current hex code value: ${hexCode}`);
   }
@@ -64,11 +62,8 @@ function App() {
   const handleSubmitX = (event) => {
     event.preventDefault();
 
-    /** create multiple values of similar colors to render */
     try {
-      console.log(event.target.value);
       let hexCodes = new Values(hexCode).all(10);
-      /** sets those values as those hex codes */
       setHexCodeList(hexCodes);
       setError(false);
     }
@@ -80,24 +75,6 @@ function App() {
     
   }
 
-  const clickHandler = (event) => {
-    event.preventDefault();
-    handleHexCodeState(event);
-
-    try {
-
-      let hexCodes = new Values(hexCode).all(5);
-      setHexCodeList(hexCodes);
-      setError(false);
-    }
-
-    catch (error) {
-      setError(true);
-      console.log(error);
-    }
-
-  }
-
     const handleSubmitY = (event) => {
     event.preventDefault();
 
@@ -105,8 +82,8 @@ function App() {
 
       let hexCodes = new Values(hexCode).all(5);
 
-      // hexCodes.forEach((hex, index) => {
-      // })
+      hexCodes.forEach((hex, index) => {
+      })
 
       setHexCodeList(hexCodes);
       setError(false);
@@ -129,8 +106,7 @@ function App() {
         handleHexCodeState={handleHexCodeState}
         error={error}
         defaultColors={defaultColors}
-        clickHandler={clickHandler}
-        // handleDefaultColorClick={handleDefaultColorClick}
+       
       />
     </div>
   )
