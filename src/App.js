@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+// import GenerateColors from './GenerateColors/GenerateColors';
 import Home from './Home/Home';
 import Values from 'values.js';
 import "./index.css";
@@ -117,7 +118,8 @@ function App() {
 
   return (
     <div className='App-container'>
-      <Home
+      <Home />
+      {/* <GenerateColors
         handleSubmitX={handleSubmitX} 
         // handleSubmitY={handleSubmitY}
         hexCode={hexCode}
@@ -126,7 +128,7 @@ function App() {
         error={error}
         defaultColors={defaultColors}
         handleColorButton={handleColorButton}
-      />
+      /> */}
     </div>
   )
   
