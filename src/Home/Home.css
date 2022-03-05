@@ -54,6 +54,13 @@ input {
     justify-content: center;
 }
 
+.color-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+}
+
 button {
     font-size: 14px;
     font-weight: bold;  

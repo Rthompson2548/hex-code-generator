@@ -54,7 +54,7 @@ function App() {
   ];
 
   useEffect(() => {
-    setHexCode(hexCode);
+    // setHexCode(hexCode);
   }, [hexCode])
  
   const handleHexCodeState = (event) => {
@@ -98,28 +98,28 @@ function App() {
     
   }
 
-    const handleSubmitY = (event) => {
-    event.preventDefault();
+  //   const handleSubmitY = (event) => {
+  //   event.preventDefault();
 
-    try {
+  //   try {
 
-      let hexCodes = new Values(hexCode).all(5);
-      setHexCodeList(hexCodes);
-      setError(false);
-    }
+  //     let hexCodes = new Values(hexCode).all(5);
+  //     setHexCodeList(hexCodes);
+  //     setError(false);
+  //   }
 
-    catch (error) {
-      setError(true);
-      console.log(error);
-    }
+  //   catch (error) {
+  //     setError(true);
+  //     console.log(error);
+  //   }
     
-  }
+  // }
 
   return (
     <div className='App-container'>
       <Home
         handleSubmitX={handleSubmitX} 
-        handleSubmitY={handleSubmitY}
+        // handleSubmitY={handleSubmitY}
         hexCode={hexCode}
         hexCodeList={hexCodeList}
         handleHexCodeState={handleHexCodeState}

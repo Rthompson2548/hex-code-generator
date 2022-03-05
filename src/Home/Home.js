@@ -4,7 +4,8 @@ import SingleColor from '../SingleColor/SingleColor';
 import "./Home.css";
 import DefaultColors from '../DefaultColors/DefaultColors';
 
-const Home = ({ handleSubmitX, handleSubmitY, hexCode, setHexCode, hexCodeList, handleHexCodeState, defaultColors, defaultColor, handleColorButton }) => {
+const Home = ({ handleSubmitX, hexCode, setHexCode, hexCodeList, handleHexCodeState, defaultColors, defaultColor, handleColorButton }) => {
+
 
 
 
@@ -25,7 +26,7 @@ const Home = ({ handleSubmitX, handleSubmitY, hexCode, setHexCode, hexCodeList, 
                 type="text"
                 id="hex-code"
                 value={hexCode}
-                onChange={handleHexCodeState}
+                onChange={setHexCode}
                 placeholder='#f15205'
           >
           </input>
@@ -33,20 +34,22 @@ const Home = ({ handleSubmitX, handleSubmitY, hexCode, setHexCode, hexCodeList, 
           <div className="generate-buttons">
             {/* generates 20 colors */}
             <button className='generate-button twenty' onClick={handleSubmitX}>
-              Generate 20 colors
+              Generate colors
             </button>
 
             {/* generates 40 colors */}
-            <button className='generate-button forty' onClick={handleSubmitY}>
+            {/* <button className='generate-button forty' onClick={handleSubmitY}>
               Generate 40 colors
-            </button>
+            </button> */}
           </div>
           
           
           {/* buttons for default color options */}
          
             
-            <h3>Choose from color options</h3>
+          <div className="color-buttons-container">
+
+             <h3>Choose from color options</h3>
 
             <ul className="color-option-buttons">
               
@@ -54,12 +57,12 @@ const Home = ({ handleSubmitX, handleSubmitY, hexCode, setHexCode, hexCodeList, 
                     defaultColors.map((color, index) => {
                         return <li key={index} className='default-color'>
                           <button
-                                /** sets value to the hex code for the color */
+                            /** sets value to the hex code for the color */
                             value={color.code}
                             style={{ backgroundColor: color.code }}
                             className="color-button"
-                                onClick={handleColorButton}>
-                                  {color.name}
+                            onClick={handleColorButton}>
+                              {color.name}
                             </button>
                           
                  
@@ -70,6 +73,8 @@ const Home = ({ handleSubmitX, handleSubmitY, hexCode, setHexCode, hexCodeList, 
 
             </ul>
 
+
+          </div>
           
        
         </div>
