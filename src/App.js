@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Home from './Home/Home';
 import Values from 'values.js';
 import "./index.css";
@@ -52,21 +52,23 @@ function App() {
       code: "#ffffff",
     },
   ];
+
+  useEffect(() => {
+    setHexCode(hexCode);
+  }, [hexCode])
  
   const handleHexCodeState = (event) => {
     event.preventDefault();
     setHexCode(event.target.value);
   }
 
-
-
   const handleColorButton = (event) => {
     event.preventDefault();
-
     setHexCode(event.target.value);
-    console.log(`hex code: ${hexCode}`);
-
+    
     try {
+      
+    console.log(`hex code: ${hexCode}`);
       let hexCodes = new Values(hexCode).all(10);
       setHexCodeList(hexCodes);
       setError(false);

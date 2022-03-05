@@ -4,7 +4,7 @@ import SingleColor from '../SingleColor/SingleColor';
 import "./Home.css";
 import DefaultColors from '../DefaultColors/DefaultColors';
 
-const Home = ({ handleSubmitX, handleSubmitY, hexCode, hexCodeList, handleHexCodeState, defaultColors, defaultColor, handleColorButton }) => {
+const Home = ({ handleSubmitX, handleSubmitY, hexCode, setHexCode, hexCodeList, handleHexCodeState, defaultColors, defaultColor, handleColorButton }) => {
 
 
 
@@ -32,31 +32,32 @@ const Home = ({ handleSubmitX, handleSubmitY, hexCode, hexCodeList, handleHexCod
       
           <div className="generate-buttons">
             {/* generates 20 colors */}
-            <button className='twenty' onClick={handleSubmitX}>
+            <button className='generate-button twenty' onClick={handleSubmitX}>
               Generate 20 colors
             </button>
 
             {/* generates 40 colors */}
-            <button className='forty' onClick={handleSubmitY}>
+            <button className='generate-button forty' onClick={handleSubmitY}>
               Generate 40 colors
             </button>
           </div>
           
           
           {/* buttons for default color options */}
-          <div className="color-options">
+         
             
             <h3>Choose from color options</h3>
 
-            <div className="color-option-buttons">
+            <ul className="color-option-buttons">
               
               {
                     defaultColors.map((color, index) => {
                         return <li key={index} className='default-color'>
-                            <button                               
+                          <button
                                 /** sets value to the hex code for the color */
-                                value={color.code}
-                                
+                            value={color.code}
+                            style={{ backgroundColor: color.code }}
+                            className="color-button"
                                 onClick={handleColorButton}>
                                   {color.name}
                             </button>
@@ -67,9 +68,9 @@ const Home = ({ handleSubmitX, handleSubmitY, hexCode, hexCodeList, handleHexCod
                     })
               }
 
-            </div>
+            </ul>
 
-          </div>
+          
        
         </div>
 
