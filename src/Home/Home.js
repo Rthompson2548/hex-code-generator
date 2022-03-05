@@ -4,7 +4,10 @@ import SingleColor from '../SingleColor/SingleColor';
 import "./Home.css";
 import DefaultColors from '../DefaultColors/DefaultColors';
 
-const Home = ({ handleSubmitX, /** handleSubmitY */ hexCode, hexCodeList, handleHexCodeState, defaultColors, defaultColor }) => {
+const Home = ({ handleSubmitX, handleSubmitY, hexCode, hexCodeList, handleHexCodeState, defaultColors, defaultColor, handleColorButton }) => {
+
+
+
   return (
     <div className='home-container'>
       <div className='hex-code-header'>
@@ -34,25 +37,37 @@ const Home = ({ handleSubmitX, /** handleSubmitY */ hexCode, hexCodeList, handle
             </button>
 
             {/* generates 40 colors */}
-            {/* <button className='forty' onClick={handleSubmitY}>
+            <button className='forty' onClick={handleSubmitY}>
               Generate 40 colors
-            </button> */}
+            </button>
           </div>
           
           
           {/* buttons for default color options */}
           <div className="color-options">
             
-            {/* <h3>Choose from color options</h3>
+            <h3>Choose from color options</h3>
 
             <div className="color-option-buttons">
               
-              <DefaultColors
-                defaultColors={defaultColors}
-                defaultColor={defaultColor}
-              />
+              {
+                    defaultColors.map((color, index) => {
+                        return <li key={index} className='default-color'>
+                            <button                               
+                                /** sets value to the hex code for the color */
+                                value={color.code}
+                                
+                                onClick={handleColorButton}>
+                                  {color.name}
+                            </button>
+                          
+                 
+                        </li>
+                         
+                    })
+              }
 
-            </div> */}
+            </div>
 
           </div>
        

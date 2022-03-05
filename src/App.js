@@ -56,8 +56,29 @@ function App() {
   const handleHexCodeState = (event) => {
     event.preventDefault();
     setHexCode(event.target.value);
-    console.log(`current hex code value: ${hexCode}`);
   }
+
+
+
+  const handleColorButton = (event) => {
+    event.preventDefault();
+
+    setHexCode(event.target.value);
+    console.log(`hex code: ${hexCode}`);
+
+    try {
+      let hexCodes = new Values(hexCode).all(10);
+      setHexCodeList(hexCodes);
+      setError(false);
+    }
+
+    catch (error) {
+      setError(true);
+      console.log(error);
+    }
+  };
+
+ 
 
   const handleSubmitX = (event) => {
     event.preventDefault();
@@ -81,10 +102,6 @@ function App() {
     try {
 
       let hexCodes = new Values(hexCode).all(5);
-
-      hexCodes.forEach((hex, index) => {
-      })
-
       setHexCodeList(hexCodes);
       setError(false);
     }
@@ -100,13 +117,13 @@ function App() {
     <div className='App-container'>
       <Home
         handleSubmitX={handleSubmitX} 
-        // handleSubmitY={handleSubmitY}
+        handleSubmitY={handleSubmitY}
         hexCode={hexCode}
         hexCodeList={hexCodeList}
         handleHexCodeState={handleHexCodeState}
         error={error}
         defaultColors={defaultColors}
-       
+        handleColorButton={handleColorButton}
       />
     </div>
   )
