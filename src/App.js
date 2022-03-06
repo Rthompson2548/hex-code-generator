@@ -6,7 +6,6 @@ import "./App.css";
 
 function App() {
 
-  // const [displayDefaultColors, setDisplayDefaultColors] = useState(false);
    /** holds the state of the users hex code input */
   const [hexCode, setHexCode] = useState("");
   /** holds the state of all colors generated from the hex code input & sets an initial value for initial render */
@@ -18,27 +17,27 @@ function App() {
   const defaultColors = [
     {
       name: "Red",
-      code: "#FF0000",
+      code: "#DC143C",
     },
     {
       name: "Orange",
-      code: "#ffa500",
+      code: "#FF8C00",
     },
     {
       name: "Yellow",
-      code: "#FFFF00",
+      code: "#F7DA63",
     },
     {
       name: "Green",
-      code: "#008000",
+      code: "#3CB371",
     },
     {
       name: "Blue",
-      code: "#0000FF",
+      code: "#1E90FF",
     },
     {
       name: "Purple",
-      code: "#800080",
+      code: "#DDA0DD",
     },
     {
       name: "Pink",
@@ -50,7 +49,7 @@ function App() {
     },
     {
       name: "White",
-      code: "#ffffff",
+      code: "#D3D3D3",
     },
   ];
 
@@ -95,22 +94,6 @@ function App() {
     
   }
 
-  //   const handleSubmitY = (event) => {
-  //   event.preventDefault();
-
-  //   try {
-
-  //     let hexCodes = new Values(hexCode).all(5);
-  //     setHexCodeList(hexCodes);
-  //     setError(false);
-  //   }
-
-  //   catch (error) {
-  //     setError(true);
-  //     console.log(error);
-  //   }
-    
-  // }
 
   const handleChange = (event) => {
     event.preventDefault();
@@ -120,10 +103,7 @@ function App() {
   return (
     <div className='App-container'>
       <Home
-        // handleDisplayDefaultColors={handleDisplayDefaultColors}
         handleSubmitX={handleSubmitX}
-        // setDisplayDefaultColors={setDisplayDefaultColors}
-        // displayDefaultColors={displayDefaultColors}
         hexCode={hexCode}
         handleChange={handleChange}
         hexCodeList={hexCodeList}
