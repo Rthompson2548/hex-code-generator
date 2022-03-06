@@ -1,6 +1,7 @@
-* {
-margin: 0;
-padding: 0;
+html {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(#f7c2e7, #ffffff) no-repeat center center fixed;
 }
 
 .App-container {

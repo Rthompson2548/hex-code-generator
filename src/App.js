@@ -3,10 +3,10 @@ import Home from './Home/Home';
 import Values from 'values.js';
 import "./index.css";
 import "./App.css";
-import HomePage from './HomePage/HomePage';
 
 function App() {
 
+  // const [displayDefaultColors, setDisplayDefaultColors] = useState(false);
    /** holds the state of the users hex code input */
   const [hexCode, setHexCode] = useState("");
   /** holds the state of all colors generated from the hex code input & sets an initial value for initial render */
@@ -54,9 +54,7 @@ function App() {
     },
   ];
 
-  useEffect(() => {
-    // setHexCode(hexCode);
-  }, [hexCode])
+
  
   const handleHexCodeState = (event) => {
     event.preventDefault();
@@ -66,12 +64,10 @@ function App() {
   const handleColorButton = (event) => {
     event.preventDefault();
     setHexCode(event.target.value);
-    
-    try {
-      
-    console.log(`hex code: ${hexCode}`);
+
+    try {     
+      console.log(`hex code: ${hexCode}`);
       let hexCodes = new Values(hexCode).all(10);
-      setHexCodeList(hexCodes);
       setError(false);
     }
 
@@ -89,6 +85,7 @@ function App() {
       let hexCodes = new Values(hexCode).all(10);
       setHexCodeList(hexCodes);
       setError(false);
+      setHexCode("");
     }
 
     catch (error) {
@@ -98,18 +95,43 @@ function App() {
     
   }
 
+  //   const handleSubmitY = (event) => {
+  //   event.preventDefault();
+
+  //   try {
+
+  //     let hexCodes = new Values(hexCode).all(5);
+  //     setHexCodeList(hexCodes);
+  //     setError(false);
+  //   }
+
+  //   catch (error) {
+  //     setError(true);
+  //     console.log(error);
+  //   }
+    
+  // }
+
+  const handleChange = (event) => {
+    event.preventDefault();
+    setHexCode(event.target.value)
+  }
+
   return (
     <div className='App-container'>
       <Home
-        handleSubmitX={handleSubmitX} 
-        // handleSubmitY={handleSubmitY}
+        // handleDisplayDefaultColors={handleDisplayDefaultColors}
+        handleSubmitX={handleSubmitX}
+        // setDisplayDefaultColors={setDisplayDefaultColors}
+        // displayDefaultColors={displayDefaultColors}
         hexCode={hexCode}
+        handleChange={handleChange}
         hexCodeList={hexCodeList}
         handleHexCodeState={handleHexCodeState}
         error={error}
         defaultColors={defaultColors}
         handleColorButton={handleColorButton}
-      /> 
+      />
     </div>
   )
   

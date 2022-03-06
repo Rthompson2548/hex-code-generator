@@ -3,9 +3,9 @@ import SingleColor from '../SingleColor/SingleColor';
 // import Values from 'values.js';
 import "./Home.css";
 import DefaultColors from '../DefaultColors/DefaultColors';
-import HomePage from '../HomePage/HomePage';
 
-const Home = ({ handleSubmitX, hexCode, setHexCode, hexCodeList, handleHexCodeState, defaultColors, defaultColor, handleColorButton }) => {
+const Home = ({ handleSubmitX, hexCode, setHexCode, handleChange, hexCodeList, displayDefaultColors, setDisplayDefaultColors, defaultColors, handleColorButton, handleDisplayDefaultColors }) => {
+
 
   return (
     <div className='home-container'>
@@ -13,28 +13,31 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, hexCodeList, handleHexCodeSt
         <h2 className='hex-code-title'>HEX PALETTE GENERATOR</h2>
         <h4 className='hex-code-description'>Generate analogous colors</h4>
       </div>
-        <form className="hex-code-form">
+        <form id="color-form" className="hex-code-form">
               
         <div className='generate-hex-code'>
-          <label id="hex-code">Enter a color or code</label>      
+     
+         
+          <label className='label-text' id="hex-code">Enter a custom color or hex code</label>
+            
           <input
                 type="text"
                 id="hex-code"
+                name={hexCode}
                 value={hexCode}
-                onChange={setHexCode}
-                placeholder='#f15205'>
+                onChange={handleChange}
+                placeholder='#f15205'
+          >
           </input>
-          <div className="generate-buttons">
-            {/* generates 20 colors */}
-            <button className='generate-button twenty' onClick={handleSubmitX}>
-              Generate colors
-            </button>    
-          </div>
-         
-          {/* DefaultColors */}
-          <div className="color-buttons-container">
-             <h3>Choose from color options</h3>
-            <ul className="color-option-buttons">             
+
+          <h3>OR</h3>
+          
+          <button className='paste-color-below-btn label-text'>Click to paste a color below</button>
+
+      
+          {/* buttons for default color options */}
+          <div className="color-buttons-container">     
+              <ul className="color-option-buttons">            
               {defaultColors.map((color, index) => {
                         return <li key={index} className='default-color'>
                           <button
@@ -42,13 +45,22 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, hexCodeList, handleHexCodeSt
                             value={color.code}
                             style={{ backgroundColor: color.code }}
                             className="color-button"
-                            onClick={handleColorButton}>
+                            onClick={handleColorButton}
+                          >
                               {color.name}
-                            </button>  
-                        </li>     
+                          </button>                      
+                        </li>                      
                     })}
             </ul>
+            
+
+            <div className="generate-buttons">
+            {/* generates 20 colors */}
+            <button className='generate-button twenty' onClick={handleSubmitX}>
+              Generate colors
+            </button>
           </div>
+          </div>    
         </div>
 
         <section className="hex-color-list">
@@ -68,7 +80,7 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, hexCodeList, handleHexCodeSt
               
       </form>
 
-      
+
     </div>
   )
 }
