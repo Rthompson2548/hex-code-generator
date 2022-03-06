@@ -3,6 +3,7 @@ import Home from './Home/Home';
 import Values from 'values.js';
 import "./index.css";
 import "./App.css";
+import HomePage from './HomePage/HomePage';
 
 function App() {
 
@@ -80,7 +81,6 @@ function App() {
     }
   };
 
- 
 
   const handleSubmitX = (event) => {
     event.preventDefault();
@@ -98,23 +98,6 @@ function App() {
     
   }
 
-  //   const handleSubmitY = (event) => {
-  //   event.preventDefault();
-
-  //   try {
-
-  //     let hexCodes = new Values(hexCode).all(5);
-  //     setHexCodeList(hexCodes);
-  //     setError(false);
-  //   }
-
-  //   catch (error) {
-  //     setError(true);
-  //     console.log(error);
-  //   }
-    
-  // }
-
   return (
     <div className='App-container'>
       <Home
@@ -126,7 +109,7 @@ function App() {
         error={error}
         defaultColors={defaultColors}
         handleColorButton={handleColorButton}
-      />
+      /> 
     </div>
   )
   

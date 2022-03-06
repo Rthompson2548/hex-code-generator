@@ -3,11 +3,9 @@ import SingleColor from '../SingleColor/SingleColor';
 // import Values from 'values.js';
 import "./Home.css";
 import DefaultColors from '../DefaultColors/DefaultColors';
+import HomePage from '../HomePage/HomePage';
 
 const Home = ({ handleSubmitX, hexCode, setHexCode, hexCodeList, handleHexCodeState, defaultColors, defaultColor, handleColorButton }) => {
-
-
-
 
   return (
     <div className='home-container'>
@@ -18,43 +16,26 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, hexCodeList, handleHexCodeSt
         <form className="hex-code-form">
               
         <div className='generate-hex-code'>
-     
-         
-          <label id="hex-code">Enter a color or code</label>
-            
+          <label id="hex-code">Enter a color or code</label>      
           <input
                 type="text"
                 id="hex-code"
                 value={hexCode}
                 onChange={setHexCode}
-                placeholder='#f15205'
-          >
+                placeholder='#f15205'>
           </input>
-      
           <div className="generate-buttons">
             {/* generates 20 colors */}
             <button className='generate-button twenty' onClick={handleSubmitX}>
               Generate colors
-            </button>
-
-            {/* generates 40 colors */}
-            {/* <button className='generate-button forty' onClick={handleSubmitY}>
-              Generate 40 colors
-            </button> */}
+            </button>    
           </div>
-          
-          
-          {/* buttons for default color options */}
          
-            
+          {/* DefaultColors */}
           <div className="color-buttons-container">
-
              <h3>Choose from color options</h3>
-
-            <ul className="color-option-buttons">
-              
-              {
-                    defaultColors.map((color, index) => {
+            <ul className="color-option-buttons">             
+              {defaultColors.map((color, index) => {
                         return <li key={index} className='default-color'>
                           <button
                             /** sets value to the hex code for the color */
@@ -63,20 +44,11 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, hexCodeList, handleHexCodeSt
                             className="color-button"
                             onClick={handleColorButton}>
                               {color.name}
-                            </button>
-                          
-                 
-                        </li>
-                         
-                    })
-              }
-
+                            </button>  
+                        </li>     
+                    })}
             </ul>
-
-
           </div>
-          
-       
         </div>
 
         <section className="hex-color-list">
@@ -95,6 +67,8 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, hexCodeList, handleHexCodeSt
         </section>
               
       </form>
+
+      
     </div>
   )
 }
