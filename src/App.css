@@ -1,7 +1,11 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 html {
     padding: 0;
     margin: 0;
-    background: linear-gradient(#f7c2e7, #ffffff) no-repeat center center fixed;
+    background: linear-gradient(#ffbceb, #ffd4f2, #fff, #fff, #ffffff, #fff, rgb(202, 205, 245)) no-repeat center center;
 }
 
 .App-container {

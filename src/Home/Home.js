@@ -9,16 +9,15 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, handleChange, hexCodeList, d
 
   return (
     <div className='home-container'>
-      <div className='hex-code-header'>
-        <h2 className='hex-code-title'>HEX PALETTE GENERATOR</h2>
-        <h4 className='hex-code-description'>Generate analogous colors</h4>
+      <div className='white hex-code-header'>
+        <h2 className='hex-code-title'>Hex Palette Generator</h2>
       </div>
         <form id="color-form" className="hex-code-form">
               
         <div className='generate-hex-code'>
      
          
-          <label className='label-text' id="hex-code">Enter a custom color or hex code</label>
+          <label className='label-text' id="hex-code">Enter a hex code</label>
             
           <input
                 type="text"
@@ -30,9 +29,9 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, handleChange, hexCodeList, d
           >
           </input>
 
-          <h3>OR</h3>
+          <h4>OR</h4>
           
-          <button className='paste-color-below-btn label-text'>Click to paste a color below</button>
+          <button className='paste-color-below-btn label-text'>Click a default color</button>
 
       
           {/* buttons for default color options */}
