@@ -19,38 +19,86 @@ function App() {
     {
       name: "Red",
       code: "#FF0000",
+      backgroundColor: "#fff",
     },
     {
       name: "Orange",
       code: "#ffa500",
+      backgroundColor: "#fff",
     },
     {
       name: "Yellow",
       code: "#FFFF00",
+      backgroundColor: "#fff",
     },
     {
       name: "Green",
       code: "#008000",
+      backgroundColor: "#fff",
     },
     {
       name: "Blue",
       code: "#0000FF",
+      backgroundColor: "#fff",
     },
     {
       name: "Purple",
       code: "#800080",
+      backgroundColor: "#fff",
     },
     {
       name: "Pink",
       code: "#FFC0CB",
+      backgroundColor: "#fff",
     },
     {
       name: "Black",
       code: "#000000",
+      backgroundColor: "#fff",
+    },
+  ];
+
+
+   const trendingColors = [
+    {
+      name: "Red",
+      code: "#FF0000",
+      backgroundColor: "#fff",
     },
     {
-      name: "White",
-      code: "#ffffff",
+      name: "Orange",
+      code: "#ffa500",
+      backgroundColor: "#fff",
+    },
+    {
+      name: "Yellow",
+      code: "#FFFF00",
+      backgroundColor: "#fff",
+    },
+    {
+      name: "Green",
+      code: "#008000",
+      backgroundColor: "#fff",
+    },
+    {
+      name: "Blue",
+      code: "#0000FF",
+      backgroundColor: "#fff",
+    },
+    {
+      name: "Purple",
+      code: "#800080",
+      backgroundColor: "#fff",
+    },
+    {
+      name: "Pink",
+      code: "#FFC0CB",
+      backgroundColor: "#fff",
+    },
+    {
+      name: "Black",
+      code: "#000000",
+      backgroundColor: "#fff",
     },
   ];
 
@@ -120,16 +168,14 @@ function App() {
   return (
     <div className='App-container'>
       <Home
-        // handleDisplayDefaultColors={handleDisplayDefaultColors}
         handleSubmitX={handleSubmitX}
-        // setDisplayDefaultColors={setDisplayDefaultColors}
-        // displayDefaultColors={displayDefaultColors}
         hexCode={hexCode}
         handleChange={handleChange}
         hexCodeList={hexCodeList}
         handleHexCodeState={handleHexCodeState}
         error={error}
         defaultColors={defaultColors}
+        trendingColors={trendingColors}
         handleColorButton={handleColorButton}
       />
     </div>

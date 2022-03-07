@@ -4,7 +4,7 @@ import SingleColor from '../SingleColor/SingleColor';
 import "./Home.css";
 import DefaultColors from '../DefaultColors/DefaultColors';
 
-const Home = ({ handleSubmitX, hexCode, setHexCode, handleChange, hexCodeList, displayDefaultColors, setDisplayDefaultColors, defaultColors, handleColorButton, handleDisplayDefaultColors }) => {
+const Home = ({ handleSubmitX, hexCode, setHexCode, handleChange, hexCodeList, defaultColors, handleColorButton, trendingColors }) => {
 
 
   return (
@@ -29,16 +29,14 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, handleChange, hexCodeList, d
           >
           </input>
 
-          <h4>OR</h4>
           
-          <button className='paste-color-below-btn label-text'>Click a default color</button>
+          <h2 className='label-text'>Click a color below</h2>         
 
-      
-          {/* buttons for default color options */}
-          <div className="color-buttons-container">     
-              <ul className="color-option-buttons">            
+          <button className='paste-color-below-btn label-text'>2022 Trending Colors</button>
+          
+          <ul className="color-buttons-container">            
               {defaultColors.map((color, index) => {
-                        return <li key={index} className='default-color'>
+                return <li key={index}>
                           <button
                             /** sets value to the hex code for the color */
                             value={color.code}
@@ -50,7 +48,28 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, handleChange, hexCodeList, d
                           </button>                      
                         </li>                      
                     })}
-            </ul>
+          </ul>
+          
+
+          <button className='paste-color-below-btn label-text'>Basic colors</button>
+
+      
+          {/* buttons for default color options */}
+            <ul className="color-buttons-container">            
+              {trendingColors.map((color, index) => {
+                return <li key={index}>
+                          <button
+                            /** sets value to the hex code for the color */
+                            value={color.code}
+                            style={{ backgroundColor: color.code }}
+                            className="color-button"
+                            onClick={handleColorButton}
+                          >
+                              {color.name}
+                          </button>                      
+                        </li>                      
+                    })}
+          </ul>
             
 
             <div className="generate-buttons">
@@ -60,7 +79,7 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, handleChange, hexCodeList, d
             </button>
           </div>
           </div>    
-        </div>
+        
 
         <section className="hex-color-list">
           {
