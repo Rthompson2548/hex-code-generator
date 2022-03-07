@@ -162,22 +162,6 @@ function App() {
     
   }
 
-  //   const handleSubmitY = (event) => {
-  //   event.preventDefault();
-
-  //   try {
-
-  //     let hexCodes = new Values(hexCode).all(5);
-  //     setHexCodeList(hexCodes);
-  //     setError(false);
-  //   }
-
-  //   catch (error) {
-  //     setError(true);
-  //     console.log(error);
-  //   }
-    
-  // }
 
   const handleChange = (event) => {
     event.preventDefault();
