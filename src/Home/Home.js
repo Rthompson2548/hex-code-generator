@@ -36,22 +36,27 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, handleChange, hexCodeList, d
       
           {/* buttons for default color options */}
           <div className="color-buttons-container">     
-              <ul className="color-option-buttons">            
+            <ul
+              // className="hex-color-list"
+            >            
               {defaultColors.map((color, index) => {
                         return <li key={index} className='default-color'>
                           <button
                             /** sets value to the hex code for the color */
                             value={color.code}
-                            style={{ backgroundColor: color.code }}
-                            className="color-button"
+                            style={{ backgroundColor: color.buttonColor }}
+                            // className="color-button"
                             onClick={handleColorButton}
                           >
-                              {color.name}
+                            <div className="color-button-text">
+                              <h3>{color.name}</h3>
+                              <h5>{color.code}</h5>
+                            </div>
                           </button>                      
                         </li>                      
                     })}
             </ul>
-            
+          </div>
 
             <div className="generate-buttons">
             {/* generates 20 colors */}
@@ -60,7 +65,7 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, handleChange, hexCodeList, d
             </button>
           </div>
           </div>    
-        </div>
+        
 
         <section className="hex-color-list">
           {
