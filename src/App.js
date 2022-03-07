@@ -6,7 +6,6 @@ import "./App.css";
 
 function App() {
 
-  // const [displayDefaultColors, setDisplayDefaultColors] = useState(false);
    /** holds the state of the users hex code input */
   const [hexCode, setHexCode] = useState("");
   /** holds the state of all colors generated from the hex code input & sets an initial value for initial render */
@@ -18,32 +17,21 @@ function App() {
   const defaultColors = [
     {
       name: "Red",
-<<<<<<< HEAD
       buttonColor: "#DC143C",
-=======
->>>>>>> parent of 37d673d (updated color values)
       code: "#FF0000",
     },
     {
       name: "Orange",
-<<<<<<< HEAD
       buttonColor: "#FF8C00",
       code: "#FFA500",
     },
     {
       name: "Yellow",
       buttonColor: "#F7DA63",
-=======
-      code: "#ffa500",
-    },
-    {
-      name: "Yellow",
->>>>>>> parent of 37d673d (updated color values)
       code: "#FFFF00",
     },
     {
       name: "Green",
-<<<<<<< HEAD
       buttonColor: "#3CB371",
       code: "#00ff00",
     },
@@ -56,17 +44,6 @@ function App() {
       name: "Purple",
       buttonColor: "#DDA0DD",
       code: "#6a0dad",
-=======
-      code: "#008000",
-    },
-    {
-      name: "Blue",
-      code: "#0000FF",
-    },
-    {
-      name: "Purple",
-      code: "#800080",
->>>>>>> parent of 37d673d (updated color values)
     },
     {
       name: "Pink",
@@ -78,17 +55,10 @@ function App() {
       buttonColor: "#000000",
       code: "#000000",
     },
-<<<<<<< HEAD
     // {
     //   name: "White",
     //   buttonColor: "#D3D3D3",
     // },
-=======
-    {
-      name: "White",
-      code: "#ffffff",
-    },
->>>>>>> parent of 37d673d (updated color values)
   ];
 
 
@@ -132,22 +102,6 @@ function App() {
     
   }
 
-  //   const handleSubmitY = (event) => {
-  //   event.preventDefault();
-
-  //   try {
-
-  //     let hexCodes = new Values(hexCode).all(5);
-  //     setHexCodeList(hexCodes);
-  //     setError(false);
-  //   }
-
-  //   catch (error) {
-  //     setError(true);
-  //     console.log(error);
-  //   }
-    
-  // }
 
   const handleChange = (event) => {
     event.preventDefault();
@@ -157,10 +111,7 @@ function App() {
   return (
     <div className='App-container'>
       <Home
-        // handleDisplayDefaultColors={handleDisplayDefaultColors}
         handleSubmitX={handleSubmitX}
-        // setDisplayDefaultColors={setDisplayDefaultColors}
-        // displayDefaultColors={displayDefaultColors}
         hexCode={hexCode}
         handleChange={handleChange}
         hexCodeList={hexCodeList}
