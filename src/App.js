@@ -17,48 +17,40 @@ function App() {
   const defaultColors = [
     {
       name: "Red",
-      buttonColor: "#DC143C",
-      code: "#FF0000",
+      code: "#DC143C",
     },
     {
       name: "Orange",
-      buttonColor: "#FF8C00",
-      code: "#FFA500",
+      code: "#FF8C00",
     },
     {
       name: "Yellow",
-      buttonColor: "#F7DA63",
-      code: "#FFFF00",
+      code: "#F7DA63",
     },
     {
       name: "Green",
-      buttonColor: "#3CB371",
-      code: "#00ff00",
+      code: "#3CB371",
     },
     {
       name: "Blue",
-      buttonColor: "#1E90FF",
-      code: "#0000ff",
+      code: "#1E90FF",
     },
     {
       name: "Purple",
-      buttonColor: "#DDA0DD",
-      code: "#6a0dad",
+      code: "#DDA0DD",
     },
     {
       name: "Pink",
-      buttonColor: "#FFC0CB",
-      code: "#ffc0cb",
+      code: "#FFC0CB",
     },
     {
       name: "Black",
-      buttonColor: "#000000",
       code: "#000000",
     },
-    // {
-    //   name: "White",
-    //   buttonColor: "#D3D3D3",
-    // },
+    {
+      name: "White",
+      code: "#D3D3D3",
+    },
   ];
 
 

@@ -5,7 +5,7 @@
 html {
     padding: 0;
     margin: 0;
-    /* background: linear-gradient(#ffbceb, #ffd4f2, #fff, #fff, #ffffff, #fff, rgb(202, 205, 245)) no-repeat center center; */
+    background: linear-gradient(#ffbceb, #ffd4f2, #fff, #fff, #ffffff, #fff, rgb(202, 205, 245)) no-repeat center center;
 }
 
 .App-container {
