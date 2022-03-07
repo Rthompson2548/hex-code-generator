@@ -5,9 +5,9 @@ https://hex-code-generator.vercel.app/
 
 ## Features
 React application that allows users to 
-- enter a color and generate a palette of analogous colors
-- choose from an option of how many colors to generate
-- copy the hex code for a color when clicked
+- Generate a palette of analogous colors
+- Enter a custom color, or choose from a selection of provided color options 
+- Copy the hex code for a color in the analogous pallete when clicked
 
 ## Technologies
 - React
@@ -17,5 +17,7 @@ React application that allows users to
 - HTML
 - Vercel
 
+
 ## Preview
-![color-generator](https://user-images.githubusercontent.com/80596387/156260234-d890a533-c25a-4352-ae32-4634f8cca1f9.PNG)
+![updated-hex-generator](https://user-images.githubusercontent.com/80596387/157112744-7fddd9c1-b7f8-4d5a-bbdf-a38718367fe5.PNG)
+
