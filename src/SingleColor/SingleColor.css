@@ -1,13 +1,13 @@
 
 
 .single-color-container {
-   height: 125px;
+   height: 150px;
+   width: 150px;
    border-radius: 5px;
    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
    padding: 10px;
    display: flex;
    flex-direction: column;
-   /* align-items: stretch; */
 }
 
 .single-color-container-text {
@@ -38,24 +38,7 @@
     font-weight: bold;
 }
 
-@media (min-width: 620px) {
-    .single-color-container {
-        height: 175px;
-    }
 
-}
-
-@media (min-width: 820px) {
-    .single-color-container {
-       height: 200px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .single-color-container {
-        /* padding: 20px; */
-    }
-}
 
 
 

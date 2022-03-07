@@ -29,7 +29,7 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, handleChange, hexCodeList, d
   return (
     <div className='home-container'>
       <div className='white hex-code-header'>
-        <h2 className='hex-code-title'>Hex Palette Generator</h2>
+        <h2 className='hex-code-title'>HEX PALETTE GENERATOR</h2>
       </div>
 
       <h2 className='instructions'>Enter a hex code or choose from the color options below and click generate button to generate colors</h2>  
@@ -51,7 +51,7 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, handleChange, hexCodeList, d
           >
           </input>        
 
-          <button className='paste-color-below-btn color-section-text'
+          <button className='heading-text'
             onClick={handleShowTrendingColors}
           >
             <h4>Trending Colors of 2021</h4>
@@ -72,7 +72,7 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, handleChange, hexCodeList, d
               
           }
 
-          <button className='paste-color-below-btn color-section-text' onClick={handleShowCommonColors}>
+          <button className='heading-text' onClick={handleShowCommonColors}>
             <h4>Basic colors</h4>
             <h6 className='see-colors'>See colors</h6>
             <i class="fa fa-chevron-down"></i>

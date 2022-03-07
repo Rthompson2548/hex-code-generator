@@ -1,11 +1,12 @@
 /* mobile view */
 .hex-color-list {
-    display: grid;
-    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   
     gap: 16px;
-    grid-template-columns: 1fr 1fr;
-    margin: 32px 0 72px 0;
+    margin-top: 32px;
 }
+
 
 .hex-code-header {
     display: flex;
@@ -17,10 +18,11 @@
 
 .hex-code-title {
     font-size: 42px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder !important;
     text-align: center;
     color: #000;
-    letter-spacing: 0px;
+    letter-spacing: 1px;
     margin: 12px 0 0 0;
 }
 
@@ -29,10 +31,14 @@
 }
 
 .instructions {
-    font-size: 18px;
-    text-align: center;
-    margin: 12px 42px;
+    font-size: 20px;
+    letter-spacing: 0.75px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
     font-weight: normal;
+    width: 70%;
+    text-align: center;
 }
 
 .generate-hex-code {
@@ -41,29 +47,24 @@
     align-items: center;
 }
 
-.paste-color-below-btn {
-    /* background: none; */
+.heading-text {
     background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 0 10px 0;
+    margin: 10px 0;
 	padding: 10px 10px 2px 10px;
-    /* border-radius: ; */
 	border: none;
 	cursor: pointer;
-    font-size: 22px !important;
+    font-size: 24px !important;
+    letter-spacing: 0.5px;
     box-shadow: none !important;
 }
 
-label { 
-    margin-top: 18px;
-}
-
 i {
-    font-size: 18px !important;
+    font-size: 14px !important;
     margin-top: 0;
-    color: rgba(56, 56, 56, 0.795);
+    color: rgba(27, 27, 27, 0.795);
     font-weight: lighter;
 }
 
@@ -72,6 +73,7 @@ i {
     letter-spacing: 0.5px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+    margin-top: 32px;
 }
 
 .color-section-text {
@@ -94,15 +96,23 @@ input {
 }
 
 .color-buttons-container {
-    display: grid;
-    /* grid-template-rows: 100vh; */
-    place-items: center;
-    max-width: 100%;
-    gap: 16px;
-    grid-template-columns: 1fr 1fr;
-    margin: 32px 0 72px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   
+    gap: 16px; 
 }
 
+.color-button {
+    color: #fff;
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    text-shadow: rgb(54, 54, 54) 0px 0px 1px;
+}
 
 
 .white {
@@ -123,22 +133,15 @@ button {
 .see-colors {
     font-size: 14px;
     letter-spacing: 0.5px;
-    color: rgba(56, 56, 56, 0.795);
+    color: rgba(0, 0, 0, 0.938);
     font-weight: lighter;
     margin-top: 8px;
 }
 
-.color-button {
-    color: #fff;
-    height: 150px;
-    width: 150px;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 12px;
-}
+
+
+
+
 
 .color-button-text {
     display: flex;
@@ -167,54 +170,3 @@ button {
 };
 
 
-
-
-/** tablet view */
-@media (min-width: 500px) {
-    .hex-color-list {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .color-buttons-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;  
-}
-}
-
-/** tablet view */
-@media (min-width: 820px) {
-    .hex-color-list {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-.color-buttons-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;  
-}
-}
-
-/** desktop view */
-@media (min-width: 1000px) {
-    .hex-color-list {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-    .color-buttons-container {
-        display: grid;
-        max-width: 100%;
-        gap: 16px;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        margin: 32px 0 72px 0;
-    }
-}
-
-
-@media (min-width: 1280px) {
-    .hex-color-list {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-
-    .color-buttons-container {
-        display: grid;
-        max-width: 100%;
-        gap: 16px;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        margin: 32px 0 72px 0;
-    }
-}

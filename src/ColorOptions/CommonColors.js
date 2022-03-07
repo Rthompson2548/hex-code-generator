@@ -4,7 +4,7 @@ const CommonColors = ({ defaultColors, handleColorButton }) => {
     return (
         <ul className="color-buttons-container">            
               {defaultColors.map((color, index) => {
-                return <li key={index}>
+                return <li key={index} className="color-buttons-li">
                           <button
                             /** sets value to the hex code for the color */
                             value={color.code}
