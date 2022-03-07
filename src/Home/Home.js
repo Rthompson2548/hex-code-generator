@@ -1,23 +1,45 @@
-import React /** , { useState } */ from 'react';
+import React , { useState } from 'react';
 import SingleColor from '../SingleColor/SingleColor';
 // import Values from 'values.js';
 import "./Home.css";
 import DefaultColors from '../DefaultColors/DefaultColors';
+import TrendingColors from '../ColorOptions/TrendingColors';
+import CommonColors from '../ColorOptions/CommonColors';
 
 const Home = ({ handleSubmitX, hexCode, setHexCode, handleChange, hexCodeList, defaultColors, handleColorButton, trendingColors }) => {
 
+  const [showTrendingColors, setShowTrendingColors] = useState(false);
+  const [showCommonColors, setShowCommonColors] = useState(false);
+
+
+  const handleShowTrendingColors = (event) => {
+    event.preventDefault();
+
+    setShowTrendingColors(!showTrendingColors);
+    setShowCommonColors(false);
+  }
+
+  const handleShowCommonColors = (event) => {
+    event.preventDefault();
+
+    setShowCommonColors(!showCommonColors);
+    setShowTrendingColors(false);
+  }
 
   return (
     <div className='home-container'>
       <div className='white hex-code-header'>
         <h2 className='hex-code-title'>Hex Palette Generator</h2>
       </div>
+
+      <h2 className='instructions'>Enter a hex code or choose from the color options below and click generate button to generate colors</h2>  
+
         <form id="color-form" className="hex-code-form">
               
         <div className='generate-hex-code'>
      
          
-          <label className='label-text' id="hex-code">Enter a hex code</label>
+            <label className='label-text' id="hex-code">Enter a hex code</label>
             
           <input
                 type="text"
@@ -27,60 +49,58 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, handleChange, hexCodeList, d
                 onChange={handleChange}
                 placeholder='#f15205'
           >
-          </input>
+          </input>        
 
+          <button className='paste-color-below-btn color-section-text'
+            onClick={handleShowTrendingColors}
+          >
+            <h4>Trending Colors of 2021</h4>
+            <h6 className='see-colors'>See colors</h6>
+            <i class="fa fa-chevron-down"></i>
+          </button>
           
-          <h2 className='label-text'>Click a color below</h2>         
+          {
+            showTrendingColors === true && 
+            <TrendingColors
+              defaultColors={defaultColors}             
+              trendingColors={trendingColors}
+              handleColorButton={handleColorButton}
+              showTrendingColors={showTrendingColors}
+              setShowTrendingColors={setShowTrendingColors}
+              handleShowTrendingColors={handleShowTrendingColors}
+            />
+              
+          }
 
-          <button className='paste-color-below-btn label-text'>2022 Trending Colors</button>
-          
-          <ul className="color-buttons-container">            
-              {defaultColors.map((color, index) => {
-                return <li key={index}>
-                          <button
-                            /** sets value to the hex code for the color */
-                            value={color.code}
-                            style={{ backgroundColor: color.code }}
-                            className="color-button"
-                            onClick={handleColorButton}
-                          >
-                              {color.name}
-                          </button>                      
-                        </li>                      
-                    })}
-          </ul>
-          
-
-          <button className='paste-color-below-btn label-text'>Basic colors</button>
+          <button className='paste-color-below-btn color-section-text' onClick={handleShowCommonColors}>
+            <h4>Basic colors</h4>
+            <h6 className='see-colors'>See colors</h6>
+            <i class="fa fa-chevron-down"></i>
+          </button>
 
       
-          {/* buttons for default color options */}
-            <ul className="color-buttons-container">            
-              {trendingColors.map((color, index) => {
-                return <li key={index}>
-                          <button
-                            /** sets value to the hex code for the color */
-                            value={color.code}
-                            style={{ backgroundColor: color.code }}
-                            className="color-button"
-                            onClick={handleColorButton}
-                          >
-                              {color.name}
-                          </button>                      
-                        </li>                      
-                    })}
-          </ul>
-            
+          {
+            showCommonColors === true && 
+            <CommonColors
+              defaultColors={defaultColors}
+              showCommonColors={showCommonColors}
+              setShowCommonColors={setShowCommonColors}             
+              handleColorButton={handleColorButton}              
+            />
+              
+          }
+     
 
-            <div className="generate-buttons">
-            {/* generates 20 colors */}
-            <button className='generate-button twenty' onClick={handleSubmitX}>
-              Generate colors
-            </button>
-          </div>
           </div>    
         
 
+          <div className="generate-buttons">
+            {/* generates 20 colors */}
+            <button className='generate-button twenty' onClick={handleSubmitX}>
+              Generate
+            </button>
+          </div>
+        
         <section className="hex-color-list">
           {
             hexCodeList.map((color, index) => {

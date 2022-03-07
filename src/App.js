@@ -6,6 +6,15 @@ import "./App.css";
 
 function App() {
 
+  /** state and handler for displaying/hiding colors on click */
+  const [showColors, setShowColors] = useState(false);
+
+  const handleShowColors = (event) => {
+    event.preventDefault();
+
+    setShowColors(!showColors);
+  }
+
   // const [displayDefaultColors, setDisplayDefaultColors] = useState(false);
    /** holds the state of the users hex code input */
   const [hexCode, setHexCode] = useState("");
@@ -59,46 +68,56 @@ function App() {
   ];
 
 
-   const trendingColors = [
-    {
-      name: "Red",
-      code: "#FF0000",
-      backgroundColor: "#fff",
+  const trendingColors = [
+     {
+      name: "Cerulean",
+      code: "#9BB7D4",
+      backgroundColor: "#9BB7D4",
     },
     {
-      name: "Orange",
-      code: "#ffa500",
-      backgroundColor: "#fff",
+      name: "Quiet Wave",
+      code: "#1B7340",
+      backgroundColor: "#1B7340",
     },
     {
-      name: "Yellow",
-      code: "#FFFF00",
-      backgroundColor: "#fff",
+      name: "Burnt Coral",
+      code: "#E9897E",
+      backgroundColor: "#E9897E",
     },
     {
-      name: "Green",
-      code: "#008000",
-      backgroundColor: "#fff",
+      name: "French Blue",
+      code: "#0072B5",
+      backgroundColor: "#0072B5",
     },
     {
-      name: "Blue",
-      code: "#0000FF",
-      backgroundColor: "#fff",
+      name: "Marigold",
+      code: "#FDAC53",
+      backgroundColor: "#FDAC53",
     },
     {
-      name: "Purple",
-      code: "#800080",
-      backgroundColor: "#fff",
+      name: "Rust",
+      code: "#B55A30",
+      backgroundColor: "#B55A30",
     },
     {
-      name: "Pink",
-      code: "#FFC0CB",
-      backgroundColor: "#fff",
+      name: "Green Ash",
+      code: "#A0DAA9",
+      backgroundColor: "#A0DAA9",
     },
     {
-      name: "Black",
-      code: "#000000",
-      backgroundColor: "#fff",
+      name: "Brave Ground",
+      code: "#F19828",
+      backgroundColor: "#F19828",
+    },
+    {
+      name: "Raspberry Sorbet",
+      code: "#D2386C",
+      backgroundColor: "#D2386C",
+    },
+    {
+      name: "Amethyst Orchard",
+      code: "#926AA6",
+      backgroundColor: "#926AA6",
     },
   ];
 
@@ -168,6 +187,9 @@ function App() {
   return (
     <div className='App-container'>
       <Home
+        showColors={showColors}
+        setShowColors={setShowColors}
+        handleShowColors={handleShowColors}
         handleSubmitX={handleSubmitX}
         hexCode={hexCode}
         handleChange={handleChange}
