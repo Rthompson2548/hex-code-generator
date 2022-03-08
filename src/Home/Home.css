@@ -62,7 +62,7 @@
 }
 
 i {
-    font-size: 14px !important;
+    font-size: 20px !important;
     margin-top: 0;
     color: rgba(27, 27, 27, 0.795);
     font-weight: lighter;
@@ -107,11 +107,27 @@ input {
     height: 150px;
     width: 150px;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    box-shadow: rgba(58, 58, 58, 0) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     padding: 12px;
     display: flex;
+    text-transform: uppercase;
     justify-content: center;
-    text-shadow: rgb(54, 54, 54) 0px 0px 1px;
+    text-shadow: rgb(54, 54, 54) 0px 0px 0.5px;
+    letter-spacing: 0.5px;
+}
+
+.clipboard-icon {
+    /* moves clipboard to bottom right of container */
+    margin-top: auto;
+    margin-left: auto !important;
+} 
+
+.copied-message {
+    font-size: 12px !important;
+    font-style: normal;
+    color: #fff;
+    text-shadow: rgba(39, 39, 39, 0.829) 0px 0px 1px;
+    /* margin-top: auto; */
 }
 
 
@@ -145,6 +161,7 @@ button {
 
 .color-button-text {
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 

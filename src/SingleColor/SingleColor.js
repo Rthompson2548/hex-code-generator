@@ -53,10 +53,15 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
           {weight}%
         </p>
       
+        
         {copiedToClipboard &&
-          <i class="fa-solid fa-message">
-           Copied
+          <div>
+            <i
+            className="fa-solid fa-message">
           </i>
+
+          <p className="copied-message">Copied</p>
+          </div>
           }
       
       </div>

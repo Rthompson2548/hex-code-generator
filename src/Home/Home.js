@@ -62,7 +62,7 @@ const Home = ({ handleSubmitX, hexCode, setHexCode, handleChange, hexCodeList, d
           {
             showTrendingColors === true && 
             <TrendingColors
-              defaultColors={defaultColors}             
+              defaultColors={defaultColors}
               trendingColors={trendingColors}
               handleColorButton={handleColorButton}
               showTrendingColors={showTrendingColors}

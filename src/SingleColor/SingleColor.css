@@ -19,14 +19,25 @@
     letter-spacing: 0.75px;
 }
 
-.copied-to-clipboard {
-    color: #fff !important;
+.copied-message {
+    font-size: 12px !important;
+    font-style: normal;
+    color: #fff;
+    text-shadow: rgba(39, 39, 39, 0.829) 0px 0px 1px;
+    margin-top: auto;
+    margin-right: auto !important;
 }
 
 .clipboard-icon {
     /* moves clipboard to bottom right of container */
     margin-top: auto;
     margin-left: auto;
+}
+
+i {
+    color: #fff !important;
+    text-shadow: rgba(39, 39, 39, 0.829) 0px 0px 1px;
+    font-size: 12px !important;
 }
 
 .color-light {
