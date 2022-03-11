@@ -40,11 +40,7 @@ const TrendingColors = ({ trendingColors, handleColorButton, hexCode }) => {
                           <div className='color-button-text'>
                               <p>{color.name}</p>
                               <p>{color.code}</p>
-                          </div>
-                    
-                            
-                      <i className="fa fa-paperclip clipboard-icon"></i>
-                    
+                          </div>   
                           </button>                      
                         </li>                      
                     })}
