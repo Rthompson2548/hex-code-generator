@@ -124,7 +124,7 @@ function App() {
       backgroundColor: "#ad5e99",
     },
     {
-      name: "Emerald",
+      name: "Brave Ground",
       code: "#F19828",
       backgroundColor: "#F19828",
     },

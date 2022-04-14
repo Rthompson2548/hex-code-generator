@@ -127,6 +127,11 @@ input {
 .color-button {
     color: #fff;
     font-weight: medium;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
     height: 150px;
     width: 150px;
     border-radius: 5px;

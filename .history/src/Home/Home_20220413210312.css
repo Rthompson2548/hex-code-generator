@@ -39,7 +39,6 @@ input {
 
 .hex-code-header h3 {
     font-size: 28px;
-    text-align: center;
     font-weight: medium;
 }
 
@@ -126,7 +125,6 @@ input {
 
 .color-button {
     color: #fff;
-    font-weight: medium;
     height: 150px;
     width: 150px;
     border-radius: 5px;

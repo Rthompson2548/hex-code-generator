@@ -115,16 +115,16 @@ function App() {
     },
     {
       name: "Marsala",
-      code: "#B57170",
-      backgroundColor: "#B57170",
+      code: "#B55A30",
+      backgroundColor: "#B55A30",
     },
     {
-      name: "Radiant Orchid",
-      code: "#AD5E99",
-      backgroundColor: "#ad5e99",
+      name: "Green Ash",
+      code: "#A0DAA9",
+      backgroundColor: "#A0DAA9",
     },
     {
-      name: "Emerald",
+      name: "Brave Ground",
       code: "#F19828",
       backgroundColor: "#F19828",
     },

@@ -120,11 +120,11 @@ function App() {
     },
     {
       name: "Radiant Orchid",
-      code: "#AD5E99",
-      backgroundColor: "#ad5e99",
+      code: "#A0DAA9",
+      backgroundColor: "#A0DAA9",
     },
     {
-      name: "Emerald",
+      name: "Brave Ground",
       code: "#F19828",
       backgroundColor: "#F19828",
     },
