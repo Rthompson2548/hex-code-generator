@@ -10,7 +10,8 @@ const DefaultColors = ({ defaultColors, handleDefaultColorClick }) => {
                 {
                     defaultColors.map((color, index) => {
                         return <li key={index} className='default-color'>
-                            <button           
+                            <button  
+                                className='color-btn'
                                 value={color.code}
                                 onClick={handleDefaultColorClick}>
                                 <p>{color.name}</p>
