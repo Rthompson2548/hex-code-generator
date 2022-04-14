@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const TrendingColors = ({ trendingColors, handleColorButton, hexCode }) => {
+const TrendingColors = ({ trendingColors, handleSubmitDefaultColor, hexCode }) => {
 
 
   const [copiedToClipboard, setCopiedToClipboard] = useState(false);
@@ -35,7 +35,7 @@ const TrendingColors = ({ trendingColors, handleColorButton, hexCode }) => {
                             value={color.code}
                             style={{ backgroundColor: color.code }}
                             className="color-button"
-                            onClick={handleColorButton}
+                            onClick={handleSubmitDefaultColor}
                           >
                           <div className='color-button-text'>
                               <p>{color.name}</p>
