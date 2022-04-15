@@ -76,7 +76,7 @@ form h3 {
     margin-top: 8px;
 }
 
-.hex-code-form {
+.color-form-actions {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,12 +123,6 @@ form h3 {
 .color-option-buttons { 
     display: flex;
 };
-
-.color-button-text {
-    /* display: flex; */
-    /* align-items: center; */
-    /* flex-direction: column; */
-}
 
 .color-button {
     font-weight: medium;
@@ -177,7 +171,7 @@ form h3 {
     text-shadow: rgba(39, 39, 39, 0.829) 0px 0px 1px;
 }
 
-.hex-color-list {
+.color-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;   
