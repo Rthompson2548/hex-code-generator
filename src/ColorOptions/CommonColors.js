@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../Home/Home.css";
 
 const CommonColors = ({ defaultColors, handleSubmitDefaultColor, hexCode }) => {
-  const hexCodeValue = `#${hexCode}`;
-
     return (
         <ul className="color-buttons-container">            
               {defaultColors.map((color, index) => {
