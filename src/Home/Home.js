@@ -1,30 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./Home.css";
 import SingleColor from '../SingleColor/SingleColor';
-import TrendingColors from '../ColorOptions/TrendingColors';
-import CommonColors from '../ColorOptions/CommonColors';
 
-const Home = ({ handleSubmitHexCode, hexCode, handleChange, hexCodeList, defaultColors, handleSubmitDefaultColor, trendingColors }) => {
-
-  /** states for hiding & displaying the default color options */
-  const [showTrendingColors, setShowTrendingColors] = useState(false);
-  const [showCommonColors, setShowCommonColors] = useState(false);
-
-
-  /** click handlers for displaying and hiding default colors */
-  const handleShowTrendingColors = (event) => {
-    event.preventDefault();
-    setShowTrendingColors(!showTrendingColors);
-    /** hides the common color group when the trending color group is displayed */
-    setShowCommonColors(false);
-  }
-
-  const handleShowCommonColors = (event) => {
-    event.preventDefault();
-    setShowCommonColors(!showCommonColors);
-    /** hides the trending color group when the trending color group is displayed */
-    setShowTrendingColors(false);
-  }
+const Home = ({ handleSubmitHexCode, hexCode, handleChange, hexCodeList }) => {
 
   return (
     <div>
@@ -36,8 +14,7 @@ const Home = ({ handleSubmitHexCode, hexCode, handleChange, hexCodeList, default
       {/* form for entering and choosing color values */}
       <form id="color-form">       
         <h3>Enter a hex code or select a color from the default options below, then generator button to continue</h3>
-          <div className='hex-code-form'>         
-            
+          <div className='hex-code-form'>          
             <input
                   type="text"
                   id="hex-code"
@@ -48,47 +25,7 @@ const Home = ({ handleSubmitHexCode, hexCode, handleChange, hexCodeList, default
             >
           </input> 
           
-          {/* <h3>OR</h3> */}
-        
-          {/* displays the trending colors and hides the common colors if open */}
-          
-            
-            {/* <button className='explore-btn'
-              onClick={handleShowTrendingColors}
-            >
-              Pantone colors of the year
-            </button> */}
-          <div className="explore-colors">  
-            {
-              showTrendingColors === true && 
-              <TrendingColors
-                defaultColors={defaultColors}
-                trendingColors={trendingColors}
-                handleSubmitDefaultColor={handleSubmitDefaultColor}
-                showTrendingColors={showTrendingColors}
-                setShowTrendingColors={setShowTrendingColors}
-                handleShowTrendingColors={handleShowTrendingColors}
-              />             
-            }
-          </div>
-            {/* displays the common colors and hides the trending colors if open */}
-            
-              <button className='explore-btn' onClick={handleShowCommonColors}>
-                <p>Basic colors</p>
-              </button>
-            <div className="explore-colors">
-            {
-              showCommonColors === true && 
-              <CommonColors
-                defaultColors={defaultColors}
-                showCommonColors={showCommonColors}
-                setShowCommonColors={setShowCommonColors}             
-                handleSubmitDefaultColor={handleSubmitDefaultColor}              
-              />
-                
-            }
-          </div>
-
+    
           {/* displays the analogous colors upon click */}
         <div className='generate-color-button'>       
           <button onClick={handleSubmitHexCode}>
