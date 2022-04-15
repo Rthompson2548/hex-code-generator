@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import Home from './Home/Home';
+/** imports a github repository that determines the tints and shades of css colors 
+ * url: https://github.com/noeldelgado/Values.js/ 
+*/
 import Values from 'values.js';
 import "./App.css";
 
