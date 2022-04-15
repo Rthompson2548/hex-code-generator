@@ -55,10 +55,10 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
       </div>
 
       {/* clipboard icon to copy hex code value */}
-      <div className='clipboard-icon'>
-          <i className="fa fa-paperclip"></i>
+      <div className={`fa fa-paperclip color ${index > 10 && 'color-light'}`} >
+          <i></i>
       </div>
-
+        
     </div>
   )
 
