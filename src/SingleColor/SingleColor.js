@@ -3,20 +3,20 @@ import "./SingleColor.css";
 
 /** using elements from colors data as props */
 const SingleColor = ({ rgb, weight, index, hexCode }) => {
-
   const [copiedToClipboard, setCopiedToClipboard] = useState(false);
-  /** uses .join() to render as (r, g, b) */
+  /** uses .join() to render as (r, g, b) so it can be used as a background color that matches the analogous color */
   const bcg = rgb.join(",");
 
+  /** uses template literals add a hashtag before the hex code value, so that it can be in correct syntax when the user copies and pastes it */
   const hexCodeValue = `#${hexCode}`;
 
-  /** copies and displays notification on given hex code */
+  /** copies and displays notification on given hex code that it's value has been copied */
   const handleCopiedToClipboard = () => {
     setCopiedToClipboard(true);
     navigator.clipboard.writeText(hexCodeValue);
   }
 
-  /** clears the copied to clipboard notification once 3 seconds have passed */
+  /** clears the copied to clipboard notification once 3 seconds have passed any time the paper clip icon is clicked */
   useEffect(() => {
 
     const timeout = setTimeout(() => {
@@ -27,12 +27,11 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
 
   }, [copiedToClipboard])
 
-
-
   return (
     <div
-      /** converts text color to white when colors reach a certain darkness */
+      /** converts text color to white when colors reach a certain darkness, and black for lighter colors */
       className={`single-color-container color ${index > 10 && 'color-light'}`}
+      /** sets the background color of the card as the color's value */
       style={{ backgroundColor: `rgb(${bcg})` }}
       onClick={handleCopiedToClipboard}
     >
@@ -40,10 +39,12 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
         <p className="color-value hex-code-value">
           {hexCodeValue}
         </p>    
+        {/* displays the percent of how close/far the color is from the entered value */}
         <p className="percent-value">
           {weight}%
         </p>
             
+        {/* displays confirmation message when hex code is copied */}
         {copiedToClipboard &&
           <div>
             <i className="fa-solid fa-message"></i>
@@ -52,7 +53,7 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
           }    
       </div>
 
-      {/* clipboard icon */}
+      {/* clipboard icon to copy hex code value */}
       <div className='clipboard-icon'>
           <i className="fa fa-paperclip"></i>
       </div>
