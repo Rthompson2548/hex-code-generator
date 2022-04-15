@@ -2,7 +2,7 @@ import React from 'react';
 import "./Home.css";
 import SingleColor from '../SingleColor/SingleColor';
 
-const Home = ({ handleSubmitHexCode, hexCode, handleChange, hexCodeList }) => {
+const Home = ({ handleSubmitHexCode, hexCode, handleHexCodeState, hexCodeList }) => {
 
   return (
     <div>
@@ -29,7 +29,7 @@ const Home = ({ handleSubmitHexCode, hexCode, handleChange, hexCodeList }) => {
                   name={hexCode}
                   value={hexCode}
                   /** updates the state of the hex code input value */
-                  onChange={handleChange}
+                  onChange={handleHexCodeState}
                   placeholder='Enter hex code or color name'
             >
           </input> 
