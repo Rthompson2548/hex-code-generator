@@ -20,7 +20,6 @@ i {
 .single-color-information {
     text-transform: uppercase;
     font-size: 12px;
-    letter-spacing: 0.75px;
 }
 
 /* changes font color to white depending on how dark the color is */
