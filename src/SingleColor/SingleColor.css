@@ -9,18 +9,17 @@ i {
 }
 
 .single-color-container {
-  
    border-radius: 15px;
    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
    padding: 12px;
    /** forces color container to be equal width and height */
    aspect-ratio: 1 / 1;
-   margin: 10px;  
+   margin: 8px;  
 }
 
 .single-color-information {
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 12px;
     letter-spacing: 0.75px;
 }
 
@@ -35,10 +34,12 @@ i {
 
 
 .copied-confirmation {
+    font-size: 14px;
     text-transform: capitalize;
     text-shadow: rgba(89, 89, 89, 0.829) 0px 0px 1px;
     margin-top: auto;
     margin-right: auto !important;
+    font-weight: light;
 }
 
 

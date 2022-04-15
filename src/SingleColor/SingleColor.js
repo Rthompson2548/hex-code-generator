@@ -45,19 +45,20 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
             {weight}%
           </p>
         </div>
-            
-        {/* displays confirmation message when hex code is copied */}
-        {copiedToClipboard &&
-          <div>
-            <p className="copied-confirmation">Copied</p>
-          </div>
-          }    
+           
       </div>
 
       {/* clipboard icon to copy hex code value */}
       <div className={`fa fa-paperclip color ${index > 10 && 'color-light'}`} >
           <i></i>
       </div>
+
+       {/* displays confirmation message when hex code is copied */}
+        {copiedToClipboard &&
+          <div>
+            <p className="copied-confirmation">Copied</p>
+          </div>
+          }   
         
     </div>
   )
