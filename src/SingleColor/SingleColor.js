@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./SingleColor.css";
 
-/** using elements from colors data as props */
+/** passes attributes for color data as props */
 const SingleColor = ({ rgb, weight, index, hexCode }) => {
   const [copiedToClipboard, setCopiedToClipboard] = useState(false);
   /** uses .join() to render as (r, g, b) so it can be used as a background color that matches the analogous color */
@@ -26,8 +26,6 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
     return () => clearTimeout(timeout)
 
   }, [copiedToClipboard])
-
-  
   
   return (
     <div

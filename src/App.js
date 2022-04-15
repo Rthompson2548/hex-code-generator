@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Home from './Home/Home';
 import Values from 'values.js';
-import "./index.css";
 import "./App.css";
 
 function App() {
