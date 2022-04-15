@@ -43,6 +43,28 @@ i {
 }
 
 
+@media (min-width: 769px) {
+    .single-color-information {
+        font-size: 16px;
+    }
+
+    .single-color-container {
+        font-size: 24px;
+    }
+
+    .copied-confirmation {
+        font-size: 16px;
+    }
+
+}
 
 
+@media (min-width: 1025px) {
+    .single-color-information {
+        font-size: 20px;
+    }
 
+    .copied-confirmation {
+        font-size: 18px;
+    }
+}
