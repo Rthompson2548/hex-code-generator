@@ -73,9 +73,9 @@ const Home = ({ handleSubmitHexCode, hexCode, handleChange, hexCodeList, default
           </div>
             {/* displays the common colors and hides the trending colors if open */}
             
-              {/* <button className='explore-btn' onClick={handleShowCommonColors}>
+              <button className='explore-btn' onClick={handleShowCommonColors}>
                 <p>Basic colors</p>
-              </button> */}
+              </button>
             <div className="explore-colors">
             {
               showCommonColors === true && 
