@@ -17,8 +17,12 @@ const Home = ({ handleSubmitHexCode, hexCode, handleHexCodeState, hexCodeList })
         {/* includes a hyperlink to a page that contains a list of names for various colors */}
         <label>
           <h3>
-            Enter a hex code or <a href="https://htmlcolorcodes.com/color-names/" target="_blank" rel="noopener noreferrer">color name</a>,
-            then click the generator button to continue
+            With the Hex Palette Generator, you can generate a scheme of analogous colors from any hex code, view them in order of lightest to darkest, and click on any color to copy it's hex code value.
+          </h3>
+              
+          <h3>
+             To get started, enter a hex code or <a href="https://htmlcolorcodes.com/color-names/" target="_blank" rel="noopener noreferrer">color name</a>,
+            then click the generator button to create your palette. 
           </h3>
         </label>
           
