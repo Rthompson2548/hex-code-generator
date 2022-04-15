@@ -13,7 +13,10 @@ const Home = ({ handleSubmitHexCode, hexCode, handleChange, hexCodeList }) => {
 
       {/* form for entering and choosing color values */}
       <form id="color-form">       
-        <h3>Enter a hex code or select a color from the default options below, then generator button to continue</h3>
+        <h3>Enter a hex code or
+          <a href="https://htmlcolorcodes.com/color-names/">color name</a>,
+          then click the generator button to continue
+        </h3>
           <div className='hex-code-form'>          
             <input
                   type="text"
@@ -21,7 +24,7 @@ const Home = ({ handleSubmitHexCode, hexCode, handleChange, hexCodeList }) => {
                   name={hexCode}
                   value={hexCode}
                   onChange={handleChange}
-                  placeholder='Enter hex code'
+                  placeholder='Enter hex code or color name'
             >
           </input> 
           
