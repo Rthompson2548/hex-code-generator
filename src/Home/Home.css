@@ -22,6 +22,12 @@ input {
     color: black !important;
 }
 
+.home-container {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-content: center !important;   */
+}
+
 form h3 {
     text-align: center !important;
     font-weight: normal;
@@ -33,11 +39,7 @@ form h3 {
 }
 
 
-
 .hex-code-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-bottom: 32px;
     font-family: 'Inter', sans-serif !important;    
 }
