@@ -13,8 +13,7 @@ const Home = ({ handleSubmitHexCode, hexCode, handleChange, hexCodeList }) => {
 
       {/* form for entering and choosing color values */}
       <form id="color-form">       
-        <h3>Enter a hex code or
-          <a href="https://htmlcolorcodes.com/color-names/">color name</a>,
+        <h3>Enter a hex code or <a href="https://htmlcolorcodes.com/color-names/" target="_blank">color name</a>,
           then click the generator button to continue
         </h3>
           <div className='hex-code-form'>          
