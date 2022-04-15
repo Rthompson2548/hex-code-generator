@@ -28,12 +28,6 @@ p {
   font-weight: medium; 
 }
 
-.clipboard-icon {
-    /* moves clipboard to bottom right of container */
-    margin-top: auto;
-    margin-left: auto;
-}
-
 i {
     color: #fff !important;
     font-size: 20px !important;
@@ -41,10 +35,8 @@ i {
 }
 
 .copied-confirmation {
-    font-size: 12px !important;
-    font-style: normal;
-    color: #fff;
-    text-shadow: rgba(39, 39, 39, 0.829) 0px 0px 1px;
+    text-transform: capitalize;
+    text-shadow: rgba(89, 89, 89, 0.829) 0px 0px 1px;
     margin-top: auto;
     margin-right: auto !important;
 }
