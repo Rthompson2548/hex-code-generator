@@ -5,7 +5,7 @@ import SingleColor from '../SingleColor/SingleColor';
 const Home = ({ handleSubmitHexCode, hexCode, handleHexCodeState, hexCodeList }) => {
 
   return (
-    <div>
+    <div className='home-container'>
 
       <header className='hex-code-header'>
         <h2>Hex Palette Generator</h2>

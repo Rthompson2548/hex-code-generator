@@ -9,13 +9,13 @@ i {
 }
 
 .single-color-container {
-   height: 150px;
-   width: 150px;
+  
    border-radius: 15px;
    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
    padding: 12px;
-   display: flex;
-   flex-direction: column;
+   /** forces color container to be equal width and height */
+   aspect-ratio: 1 / 1;
+   margin: 10px;  
 }
 
 .single-color-information {
