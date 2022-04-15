@@ -1,5 +1,3 @@
-
-
 .single-color-container {
    height: 150px;
    width: 150px;
@@ -10,23 +8,25 @@
    flex-direction: column;
 }
 
-.single-color-container-text {
-    text-transform: uppercase;
-    font-size: 14px;
+.single-color-information {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-transform: uppercase;
+    font-size: 14px;
     letter-spacing: 0.75px;
 }
 
-.copied-message {
-    font-size: 12px !important;
-    font-style: normal;
+/* changes font color to white depending on how dark the color is */
+.color-light {
     color: #fff;
-    text-shadow: rgba(39, 39, 39, 0.829) 0px 0px 1px;
-    margin-top: auto;
-    margin-right: auto !important;
 }
+
+.hex-code-value {
+    font-size: 15px;
+    font-weight: medium;
+}
+
 
 .clipboard-icon {
     /* moves clipboard to bottom right of container */
@@ -40,13 +40,13 @@ i {
     text-shadow: rgba(27, 27, 27, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.color-light {
+.copied-confirmation {
+    font-size: 12px !important;
+    font-style: normal;
     color: #fff;
-}
-
-.hex-code-value {
-    font-size: 15px;
-    font-weight: medium;
+    text-shadow: rgba(39, 39, 39, 0.829) 0px 0px 1px;
+    margin-top: auto;
+    margin-right: auto !important;
 }
 
 

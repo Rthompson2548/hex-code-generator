@@ -27,6 +27,8 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
 
   }, [copiedToClipboard])
 
+  
+  
   return (
     <div
       /** converts text color to white when colors reach a certain darkness, and black for lighter colors */
@@ -35,8 +37,8 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
       style={{ backgroundColor: `rgb(${bcg})` }}
       onClick={handleCopiedToClipboard}
     >
-      <div className="single-color-container-text">
-        <p className="color-value hex-code-value">
+      <div className="single-color-information">
+        <p className="hex-code-value">
           {hexCodeValue}
         </p>    
         {/* displays the percent of how close/far the color is from the entered value */}
@@ -47,8 +49,7 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
         {/* displays confirmation message when hex code is copied */}
         {copiedToClipboard &&
           <div>
-            <i className="fa-solid fa-message"></i>
-            <p className="copied-message">Copied</p>
+            <p className="copied-confirmation">Copied</p>
           </div>
           }    
       </div>
