@@ -17,7 +17,7 @@ const Home = ({ handleSubmitHexCode, hexCode, handleHexCodeState, hexCodeList })
         {/* includes a hyperlink to a page that contains a list of names for various colors */}
         <label>
           <h3>
-            Enter a hex code or <a href="https://htmlcolorcodes.com/color-names/" target="_blank">color name</a>,
+            Enter a hex code or <a href="https://htmlcolorcodes.com/color-names/" target="_blank" rel="noopener noreferrer">color name</a>,
             then click the generator button to continue
           </h3>
         </label>

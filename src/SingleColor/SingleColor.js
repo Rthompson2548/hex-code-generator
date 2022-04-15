@@ -36,13 +36,15 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
       onClick={handleCopiedToClipboard}
     >
       <div className="single-color-information">
-        <p className="hex-code-value">
+        <div>
+          <p className="hex-code-value">
           {hexCodeValue}
-        </p>    
-        {/* displays the percent of how close/far the color is from the entered value */}
-        <p className="percent-value">
-          {weight}%
-        </p>
+          </p>    
+          {/* displays the percent of how close/far the color is from the entered value */}
+          <p className="percent-value">
+            {weight}%
+          </p>
+        </div>
             
         {/* displays confirmation message when hex code is copied */}
         {copiedToClipboard &&

@@ -1,19 +1,21 @@
+/* removes vertical space between hex and weight values */
+p {
+    margin: 0;
+}
+
 .single-color-container {
    height: 150px;
    width: 150px;
    border-radius: 15px;
    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-   padding: 10px;
+   padding: 12px;
    display: flex;
    flex-direction: column;
 }
 
 .single-color-information {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 0.75px;
 }
 
@@ -23,10 +25,8 @@
 }
 
 .hex-code-value {
-    font-size: 15px;
-    font-weight: medium;
+  font-weight: medium; 
 }
-
 
 .clipboard-icon {
     /* moves clipboard to bottom right of container */
