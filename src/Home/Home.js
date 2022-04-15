@@ -48,17 +48,16 @@ const Home = ({ handleSubmitHexCode, hexCode, handleChange, hexCodeList, default
             >
           </input> 
           
-          <h3>OR</h3>
+          {/* <h3>OR</h3> */}
         
           {/* displays the trending colors and hides the common colors if open */}
-            
           
             
-            <button className='explore-btn'
+            {/* <button className='explore-btn'
               onClick={handleShowTrendingColors}
             >
               Pantone colors of the year
-            </button>
+            </button> */}
           <div className="explore-colors">  
             {
               showTrendingColors === true && 
@@ -74,9 +73,9 @@ const Home = ({ handleSubmitHexCode, hexCode, handleChange, hexCodeList, default
           </div>
             {/* displays the common colors and hides the trending colors if open */}
             
-              <button className='explore-btn' onClick={handleShowCommonColors}>
+              {/* <button className='explore-btn' onClick={handleShowCommonColors}>
                 <p>Basic colors</p>
-              </button>
+              </button> */}
             <div className="explore-colors">
             {
               showCommonColors === true && 
