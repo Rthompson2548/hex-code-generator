@@ -2,7 +2,7 @@ import React from 'react';
 import "./Home.css";
 import SingleColor from '../SingleColor/SingleColor';
 
-const Home = ({ handleSubmitHexCode, hexCode, handleHexCodeState, hexCodeList }) => {
+const Home = ({ handleSubmitHexCode, hexCode, handleHexCodeState, hexCodeList, copiedToClipboard, bcg, hexCodeValue, handleCopiedToClipboard }) => {
 
   return (
     <div>
@@ -15,7 +15,7 @@ const Home = ({ handleSubmitHexCode, hexCode, handleHexCodeState, hexCodeList })
       {/* form for entering color code and name values */}
       <form id="color-form">       
         {/* includes a hyperlink to a page that contains a list of names for various colors */}
-        <label>
+        <label for="hex-code">
           <h3>
             Enter a hex code or <a href="https://htmlcolorcodes.com/color-names/" target="_blank">color name</a>,
             then click the generator button to continue
@@ -53,6 +53,10 @@ const Home = ({ handleSubmitHexCode, hexCode, handleHexCodeState, hexCodeList })
                   {...color}
                   index={index}
                   hexCode={color.hex}
+                  copiedToClipboard={copiedToClipboard}
+                  bcg={bcg}
+                  hexCodeValue={hexCodeValue}
+                  handleCopiedToClipboard={handleCopiedToClipboard}
                 />
               )
             })
