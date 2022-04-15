@@ -11,6 +11,11 @@ a {
     text-decoration: underline;
 }
 
+
+a:visited { 
+    outline: none; 
+}
+
 label {
     font-size: 14px;
 }
@@ -179,12 +184,14 @@ form h3 {
     grid-template-columns: 1fr 1fr;
 }
 
+/** tablets */
 @media (min-width: 481px) {
     .color-list {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
+/** laptops */
 @media (min-width: 769px) {
     .color-list {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -215,9 +222,9 @@ form h3 {
 
 }
 
+/** desktops */
 @media (min-width: 1025px) {
     .color-list {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 }
-
