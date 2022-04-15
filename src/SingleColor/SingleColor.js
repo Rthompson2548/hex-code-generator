@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./SingleColor.css";
 
-
 /** using elements from colors data as props */
 const SingleColor = ({ rgb, weight, index, hexCode }) => {
 
