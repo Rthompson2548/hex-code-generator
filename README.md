@@ -1,50 +1,98 @@
-<div id="top"></div>
+# Hex Palette Generator by Reilly Thompson
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
-<p>The Hex Palette Generator is a responsive web application that allows users to generate analaogous color schemes.</p>
+## Description
 
-<p align="right">(<a href="#top">Back to top</a>)</p>
+This project uses a JavaScript library to generate analogous colors from a hex code value, and provides a copyable hex code and a tint percentage for each. 
 
-### Built With
+Hosted on Vercel at https://hex-code-generator.vercel.app/
 
-* React.js
-* React Hooks
-* JavaScript
-* CSS
-* Vercel
-* Responsive web design
-* [Values.js](https://github.com/noeldelgado/Values.js/)
+## Installation
 
-<p align="right">(<a href="#top">Back to top</a>)</p>
+1. Clone the repo: git clone https://github.com/Rthompson2548/hex-code-generator.git
+2. Change directory to `hex-code-generator`.
+3. Install the packages with `npm install`.
+4. Start the app in your local environment: `npm start`.
+5. The app should open automatically, but if it's doesn't, open `http://localhost:3000` in your browser.
 
-### Installation
+## Checklist of Requirements
 
-2. Clone the repo
-   ```sh
-   git clone https://github.com/Rthompson2548/hex-code-generator.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-   
-<p align="right">(<a href="#top">Back to top</a>)</p>
+- [x] Build a responsive user interface
+- [x] Include an explanation of the app's purpose
+- [x] Include instructions on how to use the generator
+- [x] Use the [Values.js library](https://github.com/noeldelgado/Values.js/)
+- [x] The color palette will be displayed in order of tints from lightest to darkest, with the original color in the middle.
+- [x] A palette color will display it's color as the background, as well as it's hex code value and tint.
+- [x] A palette color will copy the hex code value when it is clicked. 
 
-<!-- USAGE EXAMPLES -->
-## Usage
-The Hex Palette Generator app allows users to enter a hex code value or color name to generate a scheme of 40 analogous colors. Furthermore, the user can view the hex code and weight of a color, and copy it's value by clicking on the color.
+## Technologies
+- [x] React
+- [x] React Hooks
+- [x] JavaScript
+- [x] CSS
+- [x] Vercel
+- [x] [Values.js](https://github.com/noeldelgado/Values.js/)
 
-<p align="right">(<a href="#top">Back to top</a>)</p>
+## Basic Overview
 
+List View, Desktop
+![image](https://user-images.githubusercontent.com/39387181/152694819-f35a541e-50ab-419e-8f47-8635c61b72c6.png)
 
-<!-- Features -->
-## Features
-- [ ] Enter a hex code value or color name to generate a scheme of 40 analogous colors.
-- [ ] View the hex code and weight of a color
-- [ ] Copy the hex code value by clicking on the color.
+Grid View, Desktop
+![image](https://user-images.githubusercontent.com/39387181/152694978-51ea405a-1290-4bd4-ba82-5d99ec9769d7.png)
 
-<p align="right">(<a href="#top">Back to top</a>)</p>
+List View, Mobile
 
-## Preview
-![read-me-hex-app-img](https://user-images.githubusercontent.com/80596387/163630817-107e2edd-3f3c-47a1-9123-1d74f7c618c3.PNG)
+![image](https://user-images.githubusercontent.com/39387181/152694867-32a0a54a-a8e6-4ed3-aef5-c5c376e008d6.png)
+
+Grid View, Mobile
+
+![image](https://user-images.githubusercontent.com/39387181/152694995-779c706c-67a2-4341-b23e-146555b04081.png)
+
+## Items of Note
+
+- I tried to make the overall design with a comics theme. This is the first thing I've ever created that uses comic-sans non-ironically. And yet, I still added a small skew to the text in order to make it a little bit better.
+- I kept the width to be 75ch as that is a good width for readability.
+- I built the Tabs component from scratch. It is fairly reusable.
+- The data is not hardcoded, I load it using a custom hook to fetch the data.
+- There is one custom hook in order to fetch the data. It is reusable and it includes support for tracking loading and errors, along with the data itself.
+- The architecture/folder structure is one that I've used for a while, and it makes sense. It has the following structure:
+
+  - assets: Where any assets go. None for this project.
+  - components: Any components that are not page components go here. This includes reusable components and more bespoke components.
+  - customHooks: Any and all custom hooks will go here. Not every project I build will have these.
+  - pages: For the pages themselves, usually in apps that have React Router or NextJS, but I still include it here for organization's sake.
+  - services: Generally I keep my apiClient here, but also anything that might need 3rd party configuration would go here. I discuss the apiClient below.
+  - styles: In this app, I have chosen to do a light version of an Inverted CSS Triangle system.
+  - types: Where app-level types and enums go.
+
+- My apiClient in the apiService.ts file is where all my Axios requests go through. Many people do not create an apiClient as the documentation suggests, which eventually can lead to many apiClients being created. Instantiating an apiClient as in the documentation solves that problem as there will only be one.
+- List/Grid tab buttons are interesting as I wanted to make them look more 3D, but be very obvious about which button/tab was selected.
+- All of the stylized pieces of the UI are all CSS. There are no SVGs used.
+- The Grid shows two images side-by-side in a UI that looks very much like a comic book. It is also responsive.
+- Lighthouse score is 100% for all except for Performance. Performance is a 98%. There are Future Improvements to fix this.
+
+## Future Improvements
+
+- Make it a bit wider, 75ch for the text pieces not just the container of those text pieces.
+- Create a nicer loading state.
+- Right now, I am loading ALL the data into the List and into the Grid. Yuck. I would like to retool the design to scroll down the page in an infinite way. Creating client side infinite scrolling is a bit outside the scope of this project. However, there are images so that complicates things a bit too.
+- Find a better font for the main font instead of comic-sans. Even though it kind of works for this application, it's still not a good font.
+- Make a much nicer loading state.
+- Tabs Component Reusability: I want to extract the data out into a configuration file, and have the tabs component just loop through that configuration file. That will make the component tremendously more reusable.
+- Tabs Component Accessibility: I would definitely need to do more work to make this accessible.
+  - https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components/#accessible-tabs
+  - https://inclusive-components.design/tabbed-interfaces/
+- If there were to be any more pages, I would use React Router and then implement code splitting. I would also add a URL parameter to let the user go straight to the Grid "page" or List "page" as well.
+- Since this was a small amount of data, and no data needs to be synchronized with a server, I chose to just use a custom React Hook. Generally, with new projects, I would want to use React Query in order to synchronize data.
+- Add a favicon.
+-
+
+## Parting Words
+
+Thank you for reviewing my readme all the way to this point— it's kinda long.
+
+Thank you to my code reviewers for taking valuable time out of their day to review my project.
+
+All the best,
+
+Reilly Thompson
