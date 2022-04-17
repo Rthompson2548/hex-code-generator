@@ -4,7 +4,7 @@ p {
     font-size: 12px;
 }
 
-i {
+.fa-paperclip {
     font-size: 16px !important;
 }
 
@@ -34,28 +34,26 @@ i {
 }
 
 
+
 @media (min-width: 769px) {
-    .single-color-information {
-        font-size: 16px;
+    .single-color-information,.copied-confirmation {
+        font-size: 12px;
     }
 
     .single-color-container {
         font-size: 24px;
     }
-
-    .copied-confirmation {
-        font-size: 14px;
-    }
-
 }
 
-
 @media (min-width: 1025px) {
-    .single-color-information {
-        font-size: 20px;
+    .single-color-information, .copied-confirmation {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .single-color-information, .copied-confirmation {
+        font-size: 12px;
     }
 
-    .copied-confirmation {
-        font-size: 16px;
-    }
 }
