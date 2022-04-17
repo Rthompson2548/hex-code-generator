@@ -37,7 +37,6 @@ Hosted on Vercel at https://hex-code-generator.vercel.app/
 Mobile View
 ![mobile-view](https://user-images.githubusercontent.com/80596387/163723023-5967ec6b-453e-4300-84a4-3c1938d32b11.PNG)
 
-
 Tablet View
 ![tablet-view](https://user-images.githubusercontent.com/80596387/163722977-edb74a9d-0c09-41a4-9237-dc2f71a8bf40.PNG)
 
@@ -47,7 +46,10 @@ Desktop View
 Color Palette View
 ![colors-view](https://user-images.githubusercontent.com/80596387/163723046-71bbfefe-bda5-40b8-9f04-c2c28fa446de.PNG)
 
-<!-- ## Items of Note -->
+Copied to Clipboard Confirmation Message
+
+
+![copied-to-clipboard](https://user-images.githubusercontent.com/80596387/163723864-dc863846-276d-46e1-8a34-23596a147a53.PNG)
 
 ## Future Improvements
 - [ ] Implement a feature that allows the user to generate an analogous color palette from a random color
