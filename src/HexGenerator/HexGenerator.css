@@ -1,0 +1,92 @@
+.hex-generator {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.generate-color-button {
+    /* display: flex;
+    justify-content: center; */
+    /* margin: 16px 0; */
+}
+
+button {
+    background-color: #3E00FF;
+    padding: 10px 40px;
+}
+
+.clipboard-icon {
+    /* moves clipboard to bottom right of container */
+    margin-top: auto;
+    margin-left: auto !important;
+} 
+
+.copied-message {
+    font-size: 12px !important;
+    font-style: normal;
+    color: #fff;
+    text-shadow: rgba(39, 39, 39, 0.829) 0px 0px 1px;
+}
+
+.color-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/** tablets */
+@media (min-width: 481px) {
+    .color-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .hex-code-header {
+        margin: 0 24px;
+    }
+}
+
+/** laptops */
+@media (min-width: 769px) {
+
+    .hex-code-header {
+        margin: 0 32px;
+    }
+
+    .color-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .hex-code-header h2 {
+        font-size: 38px;
+    }
+
+    .hex-code-header h3 {
+        font-size: 22px;
+    }
+
+    label {
+        font-size: 18px;
+        word-wrap: break-word;
+    }
+
+    input {
+        padding: 12px 52px 12px 16px;
+        font-size: 18px;
+    }
+
+    .generate-color-button button {
+        padding: 12px 40px;
+        font-size: 20px;
+    }
+
+}
+
+/** desktops */
+@media (min-width: 1025px) {
+
+    .hex-code-header {
+        margin: 0 122px;
+    }
+    .color-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}

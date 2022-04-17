@@ -1,11 +1,12 @@
 /* removes vertical space between hex and weight values */
 p {
     margin: 0;
+    font-size: 12px;
 }
 
 i {
-    font-size: 20px !important;
-    text-shadow: rgba(27, 27, 27, 0.15) 1.95px 1.95px 2.6px;
+    font-size: 18px !important;
+    text-shadow: rgba(101, 101, 101, 0.15) 1px 1px 2px;
 }
 
 .single-color-container {
@@ -27,18 +28,13 @@ i {
     color: #fff;
 }
 
-.hex-code-value {
-  font-weight: medium; 
-}
-
-
 .copied-confirmation {
     font-size: 14px;
     text-transform: capitalize;
     text-shadow: rgba(89, 89, 89, 0.829) 0px 0px 1px;
     margin-top: auto;
     margin-right: auto !important;
-    font-weight: light;
+   
 }
 
 

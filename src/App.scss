@@ -1,0 +1,128 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    letter-spacing: 0.5px;
+    padding: 1rem 3rem;
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: 400;
+
+    @media (min-width: 480px) {
+        padding: 1rem 4rem;
+    }
+
+    @media (min-width: 769px) {
+        padding: 1rem 6rem;
+    }
+    
+    @media (min-width: 1024px) {
+        padding: 1rem 8rem;
+    }
+}  
+    
+    html {
+        display: table;
+        margin: auto;
+        color: #000;
+    }
+
+    span {
+
+        font-size: 26px;
+        font-weight: bold;
+
+        @media (min-width: 480px) {
+            font-size: 32px;
+        }
+
+        @media (min-width: 769px) {
+            font-size: 42px;
+        }
+        
+    }
+
+    h2 {
+        font-size: 16px;
+        margin-bottom: 32px;
+
+        @media (min-width: 480px) {
+            font-size: 20px;
+        }
+
+        @media (min-width: 769px) {
+            font-size: 24px;
+        }
+
+    }
+
+    h3 {
+
+        font-size: 14px;
+
+        @media (min-width: 480px) {
+            font-size: 18px;
+        }
+
+        @media (min-width: 769px) {
+            font-size: 20px;
+        }
+    }
+
+    i {
+        font-size: 20px;
+    }
+
+    a {
+        color: #000;
+    }
+
+
+    a:visited { 
+        outline: none; 
+    }
+
+    button {
+        color: #fff;
+    }
+
+    button, input {
+        border-radius: 50px;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+        font-size: 16px;  
+        display: flex;
+        justify-content: center;
+        margin: 10px auto;
+    }
+
+    input {
+        color: #000;
+        border-radius: 50px;
+        border: 1px solid rgb(172, 172, 172);
+        width: 250px;
+        padding: 6px 10px;
+        outline: none;
+    }
+
+    .white-text {
+        color: #fff;
+    }
+
+
+
+/** TO DO: MEDIA QUERY BREAKPOINTS */
+@media (min-width: 769px) {
+
+    body {
+        padding: 1rem 6rem;
+
+    }
+   
+}
+
+

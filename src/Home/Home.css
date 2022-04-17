@@ -16,10 +16,6 @@ a:visited {
     outline: none; 
 }
 
-label {
-    font-size: 14px;
-}
-
 input {
     width: 275px;
     border-radius: 10px;
@@ -43,21 +39,24 @@ form h3 {
 
 .hex-code-header {
     margin-bottom: 32px;
-    /* font-family: 'Inter', sans-serif !important;     */
+    text-align: center;
 }
 
 .hex-code-header h2 {
     font-size: 28px;
-    text-align: center;
     color: #000;
     font-weight: bolder !important;
-    margin: 0;
+    margin-bottom: 0px;
 }
 
 .hex-code-header h3 {
     font-size: 18px;
-    text-align: center;
     font-weight: normal;
+}
+
+.hex-code-header h4 {
+    font-weight: normal;
+    
 }
 
 .heading-text {
@@ -183,10 +182,19 @@ form h3 {
     .color-list {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .hex-code-header {
+        margin: 0 24px;
+    }
 }
 
 /** laptops */
 @media (min-width: 769px) {
+
+    .hex-code-header {
+        margin: 0 32px;
+    }
+
     .color-list {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
@@ -218,6 +226,10 @@ form h3 {
 
 /** desktops */
 @media (min-width: 1025px) {
+
+    .hex-code-header {
+        margin: 0 122px;
+    }
     .color-list {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
