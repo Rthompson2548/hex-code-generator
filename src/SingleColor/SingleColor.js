@@ -1,5 +1,5 @@
 import React from 'react';
-import "./SingleColor.css";
+import "./SingleColor.scss";
 import CopiedConfirmation from './CopiedConfirmation/CopiedConfirmation';
 
 /** passes attributes for color data as props */

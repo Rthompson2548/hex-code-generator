@@ -43,6 +43,14 @@ p {
     .single-color-container {
         font-size: 24px;
     }
+
+    p {
+        font-size: 16px !important;
+    }
+
+    .fa-paperclip {
+        font-size: 22px !important;
+    }
 }
 
 @media (min-width: 1025px) {

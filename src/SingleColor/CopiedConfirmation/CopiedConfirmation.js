@@ -14,7 +14,7 @@ const CopiedConfirmation = ({ formattedHexCode, index }) => {
 
     const timeout = setTimeout(() => {
       setCopiedToClipboard(false);
-    }, 1000)
+    }, 2000)
 
     return () => clearTimeout(timeout)
 
