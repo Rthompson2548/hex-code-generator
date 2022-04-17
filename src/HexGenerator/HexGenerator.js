@@ -22,6 +22,8 @@ const HexGenerator = () => {
       
       <div className='hex-generator-form'>               
         <input
+            /** disables dropdown menu of suggestions upon clicking on the input field */
+            autocomplete="off"
             type="text"
             id="hex-code"
             name={hexCode}
