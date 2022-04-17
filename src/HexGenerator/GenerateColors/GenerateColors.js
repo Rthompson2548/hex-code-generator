@@ -9,14 +9,28 @@ const GenerateColors = ({ hexCode, setHexCode, setHexCodeList }) => {
     const [inputValueError, setInputValueError] = useState(false);
 
     const generateAnalogousColors = (event) => {
-        if (hexCode.length < 1) {
+           
+        const validateInputValue = () => {
+            if (hexCode.length > 0) {
+            let validColorValue = new Option().style;
+            validColorValue.color = hexCode;
+            var validHexCodeValue = validColorValue.color === hexCode;
+            var validColorNameValue = /^#[0-9A-F]{6}$/i.test(hexCode);
+            if (validHexCodeValue === true || validColorNameValue === true) {
+                setInputValueError(false);
+            } else {
+                setInputValueError(true);
+            }
+        } else {
             setInputValueError(true);
         }
+        }
 
-    event.preventDefault();
-      let hexCodes = new Values(hexCode).all(10);
-      setHexCodeList(hexCodes);
-      setHexCode("");
+        event.preventDefault();
+        validateInputValue();
+        let hexCodes = new Values(hexCode).all(10);
+        setHexCodeList(hexCodes);
+        setHexCode("");
     
     }
 
@@ -29,8 +43,8 @@ const GenerateColors = ({ hexCode, setHexCode, setHexCodeList }) => {
             </button>
             
             {inputValueError === true && (
-                <div>
-                    <h1>Error!!!!</h1>
+                <div className="colorValueError">
+                    <h3>Error: Please enter a valid hex code value or color name.</h3>
                 </div>
             )
                 
