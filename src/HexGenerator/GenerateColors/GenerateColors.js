@@ -12,19 +12,21 @@ const GenerateColors = ({ hexCode, setHexCode, setHexCodeList }) => {
            
         const validateInputValue = () => {
             if (hexCode.length > 0) {
-            let validColorValue = new Option().style;
-            validColorValue.color = hexCode;
-            var validHexCodeValue = validColorValue.color === hexCode;
-            var validColorNameValue = /^#[0-9A-F]{6}$/i.test(hexCode);
-            if (validHexCodeValue === true || validColorNameValue === true) {
-                setInputValueError(false);
+                let validColorValue = new Option().style;
+                validColorValue.color = hexCode;
+                var validHexCodeValue = validColorValue.color === hexCode;
+                var validColorNameValue = /^#[0-9A-F]{6}$/i.test(hexCode);
+                if (validHexCodeValue === true || validColorNameValue === true) {
+                    setInputValueError(false);
+                } else {
+                    setInputValueError(true);
+                    setHexCode("");
+                    setInputValueError(false);
+                }
             } else {
                 setInputValueError(true);
-                setHexCode("");
-            }
-        } else {
-            setInputValueError(true);
-        }
+                }
+            
         }
 
         event.preventDefault();
