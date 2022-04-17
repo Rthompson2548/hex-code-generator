@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Values from 'values.js';
 import "../App.scss";
-import "./HexGenerator.css";
+import "./HexGenerator.scss";
 import SingleColor from '../SingleColor';
 import HexGeneratorHeader from './HexGeneratorHeader/HexGeneratorHeader';
 import GenerateColors from './GenerateColors/GenerateColors';
@@ -18,9 +18,9 @@ const HexGenerator = () => {
 
   return (
     <div className='hex-generator'>
-
-        <HexGeneratorHeader />       
-   
+      <HexGeneratorHeader />
+      
+      <div className='hex-generator-form'>               
         <input
             type="text"
             id="hex-code"
@@ -37,6 +37,7 @@ const HexGenerator = () => {
           hexCodeList={hexCodeList}
           setHexCodeList={setHexCodeList}
         />
+      </div>
       
         <section className="color-list">
           {

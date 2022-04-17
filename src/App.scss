@@ -97,7 +97,7 @@ body {
         font-size: 16px;  
         display: flex;
         justify-content: center;
-        margin: 10px auto;
+        margin: 16px auto;
     }
 
     input {
@@ -112,17 +112,4 @@ body {
     .white-text {
         color: #fff;
     }
-
-
-
-/** TO DO: MEDIA QUERY BREAKPOINTS */
-@media (min-width: 769px) {
-
-    body {
-        padding: 1rem 6rem;
-
-    }
-   
-}
-
 
