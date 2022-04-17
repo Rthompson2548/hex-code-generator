@@ -1,6 +1,7 @@
 import React from "react";
 import Values from "values.js";
 import "../../App.scss";
+import "./GenerateColors.scss"
 
 
 const GenerateColors = ({ hexCode, setHexCode, setHexCodeList }) => {
