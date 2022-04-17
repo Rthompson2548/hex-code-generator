@@ -13,7 +13,7 @@ const HexGenerator = () => {
 
   const handleHexCodeState = (event) => {
     event.preventDefault();
-    setHexCode(event.target.value)
+    setHexCode(event.target.value); 
   }
 
   return (
