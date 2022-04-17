@@ -49,16 +49,14 @@ Color Palette View
 
 <!-- ## Items of Note -->
 
-
-<!-- ## Future Improvements -->
-
+## Future Improvements
+- [ ] Implement a feature that allows the user to generate an analogous color palette from a random color
+- [ ] Implement a feature that allows the user to generate a complementary color palette from a random color
+- [ ] Implement a feature that allows the user to select from a list of common colors in place of entering a code or color in the input field
 
 ## Parting Words
 
-Thank you for reviewing my readme all the way to this point— it's kinda long.
-
-Thank you to my code reviewers for taking valuable time out of their day to review my project.
+Thank you for reviewing my readme, and thank you to my code reviewers for taking valuable time out of their day to review my project.
 
 All the best,
-
 Reilly Thompson
