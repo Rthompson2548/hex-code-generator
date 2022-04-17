@@ -20,6 +20,7 @@ const GenerateColors = ({ hexCode, setHexCode, setHexCodeList }) => {
                 setInputValueError(false);
             } else {
                 setInputValueError(true);
+                setHexCode("");
             }
         } else {
             setInputValueError(true);
