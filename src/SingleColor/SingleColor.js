@@ -1,6 +1,6 @@
 import React from 'react';
 import "./SingleColor.scss";
-import CopiedConfirmation from './CopiedConfirmation/CopiedConfirmation';
+import CopiedConfirmation from './CopiedConfirmation';
 
 /** passes attributes for color data as props */
 const SingleColor = ({ rgb, weight, index, hexCode }) => {

@@ -3,8 +3,8 @@ import Values from 'values.js';
 import "../App.scss";
 import "./HexGenerator.scss";
 import SingleColor from '../SingleColor';
-import HexGeneratorHeader from './HexGeneratorHeader/HexGeneratorHeader';
-import GenerateColors from './GenerateColors/GenerateColors';
+import HexGeneratorHeader from './HexGeneratorHeader';
+import GenerateColors from './GenerateColors';
 
 
 const HexGenerator = () => {

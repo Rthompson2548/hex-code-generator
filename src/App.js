@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import HexGenerator from './HexGenerator/HexGenerator';
+import HexGenerator from './HexGenerator';
 import "./App.scss";
 
 function App() {
