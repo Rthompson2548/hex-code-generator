@@ -2,45 +2,45 @@ import React, { useState } from "react";
 import Values from "values.js";
 import "../../App.scss";
 import "./GenerateColors.scss"
-// import { generateAnalogousColors } from "../../utils.js"
+import { generateAnalogousColors } from "../../utils.js"
 
 const GenerateColors = ({ hexCode, setHexCode, setHexCodeList }) => {
 
     const [inputValueError, setInputValueError] = useState(false);
 
     /** to do: move validateInputValue() and generateAnalogousColors() into a separate file */
-    const validateInputValue = () => {
-            if (hexCode.length > 0) {
-                let colorNameValue = new Option().style;
-                colorNameValue.color = hexCode;
-                let validColorName = colorNameValue.color === hexCode;
+    // const validateInputValue = () => {
+    //         if (hexCode.length > 0) {
+    //             let colorNameValue = new Option().style;
+    //             colorNameValue.color = hexCode;
+    //             let validColorName = colorNameValue.color === hexCode;
                     
-                let regExHexCodePattern = /^#[0-9A-F]{6}$/i;
-                let validHexCode = regExHexCodePattern.test(hexCode);
+    //             let regExHexCodePattern = /^#[0-9A-F]{6}$/i;
+    //             let validHexCode = regExHexCodePattern.test(hexCode);
                     
-                if (validColorName === true || validHexCode === true) {
-                    setInputValueError(false);
+    //             if (validColorName === true || validHexCode === true) {
+    //                 setInputValueError(false);
                 
-                } else {
-                    setInputValueError(true); 
-                    setHexCode("");
-                }        
-            } else {
-                setInputValueError(true);
-            }
+    //             } else {
+    //                 setInputValueError(true); 
+    //                 setHexCode("");
+    //             }        
+    //         } else {
+    //             setInputValueError(true);
+    //         }
             
-    }
+    // }
 
-    const generateAnalogousColors =  (event) => {
+    // const generateAnalogousColors =  (event) => {
     
-            event.preventDefault();
-            validateInputValue();
+    //         event.preventDefault();
+    //         validateInputValue();
             
-            let hexCodes = new Values(hexCode).all(10);
-            setHexCodeList(hexCodes);            
-            setHexCode("");
+    //         let hexCodes = new Values(hexCode).all(10);
+    //         setHexCodeList(hexCodes);            
+    //         setHexCode("");
       
-    }
+    // }
 
     return (
         <div className="generate-colors">                      
