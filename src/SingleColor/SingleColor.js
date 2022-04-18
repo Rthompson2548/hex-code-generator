@@ -10,7 +10,7 @@ const SingleColor = ({ rgb, weight, index, hexCode }) => {
 
   return (
     <div
-      className={`single-color-container color ${index > 10 && 'color-light'}`}
+      className={`single-color-container color ${index > 10 && 'white-text'}`}
       style={{ backgroundColor: `rgb(${rgbString})` }}
     >
       <div className="single-color-information">

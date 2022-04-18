@@ -1,67 +1,38 @@
-/* removes vertical space between hex and weight values */
-p {
-    margin: 0;
-    font-size: 12px;
-}
-
-.fa-paperclip {
-    font-size: 16px !important;
-}
-
 .single-color-container {
    border-radius: 15px;
    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
    padding: 12px;
    aspect-ratio: 1 / 1;
-   margin: 8px;  
-}
-
-.single-color-information {
-    text-transform: uppercase;
-    font-size: 12px;
-}
-
-/* changes font color to white depending on how dark the color is */
-.color-light {
-    color: #fff;
-}
-
-.copied-confirmation {
-    font-size: 12px;
-    text-transform: capitalize;
-    margin-top: auto;
-    margin-right: auto !important; 
-}
-
-
-
-@media (min-width: 769px) {
-    .single-color-information,.copied-confirmation {
-        font-size: 12px;
-    }
-
-    .single-color-container {
-        font-size: 24px;
-    }
+   margin: 8px;
 
     p {
-        font-size: 16px !important;
+        margin: 0;
+        font-size: 12px;
+
+        @media (min-width: 769px) {
+            font-size: 16px;
+        }
     }
 
     .fa-paperclip {
-        font-size: 22px !important;
-    }
-}
+        font-size: 16px !important;
 
-@media (min-width: 1025px) {
-    .single-color-information, .copied-confirmation {
-        font-size: 14px;
+        @media (min-width: 769px) {
+            font-size: 22px !important;
+        }
     }
-}
 
-@media (min-width: 1200px) {
-    .single-color-information, .copied-confirmation {
+    .single-color-information {
+        text-transform: uppercase;
         font-size: 12px;
+    }
+
+    .single-color-information,.copied-confirmation {
+        font-size: 12px;
+
+        @media (min-width: 1024px) {
+            font-size: 14px;
+        }
     }
 
 }

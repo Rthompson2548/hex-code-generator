@@ -1,11 +1,13 @@
-button {
-    padding: 8px 72px;
-}
+.generate-colors {
+    button {
+        padding: 8px 72px;
+    }
 
-.colorValueError h3 {
-    text-align: center;
-}
+    .colorValueError h3 {
+        text-align: center;
+    }
 
-#confirmErrorMessage {
-    background-color: green;
+    #confirmErrorMessage {
+        background-color: green;
+    }
 }
