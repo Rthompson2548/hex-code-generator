@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import Values from "values.js";
 import "../../App.scss";
 import "./GenerateColors.scss"
-
+// import { generateAnalogousColors } from "../../utils.js"
 
 const GenerateColors = ({ hexCode, setHexCode, setHexCodeList }) => {
 
     const [inputValueError, setInputValueError] = useState(false);
 
+    /** to do: move validateInputValue() and generateAnalogousColors() into a separate file */
     const validateInputValue = () => {
             if (hexCode.length > 0) {
                 let colorNameValue = new Option().style;
