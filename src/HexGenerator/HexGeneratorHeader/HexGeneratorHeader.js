@@ -6,8 +6,8 @@ const HexGeneratorHeader = () => {
     return (
         <div className="hex-generator-header">
             
-                <span>Hex Palette Generator</span>
-                <h2>Create analogous color schemes</h2>
+            <span>Hex Palette Generator</span>
+            <h2>Create analogous color schemes</h2>
             
             <h3>
                 With the Hex Palette Generator, you can generate a scheme of analogous colors from any hex code, view them in order of lightest to darkest, and click on any color to copy it's hex code value.

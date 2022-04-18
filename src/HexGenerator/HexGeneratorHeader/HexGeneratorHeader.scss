@@ -1,40 +1,8 @@
 .hex-generator-header { 
     text-align: center;
     
-}
-
-button {
-    background-color: #3E00FF;
-    padding: 10px 40px;
-}
-
-.color-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-/** tablets */
-@media (min-width: 481px) {
-    .color-list {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .hex-code-header {
+    @media (min-width: 481px) {
         margin: 0 24px;
     }
-}
 
-/** laptops */
-@media (min-width: 769px) {
-  .color-list {
-        // grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-}
-
-/** desktops */
-@media (min-width: 1024px) {
-    .color-list {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
 }

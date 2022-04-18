@@ -45,6 +45,7 @@ const GenerateColors = ({ hexCode, setHexCode, setHexCodeList }) => {
     return (
         <div className="generate-colors">                      
             <button
+                className="generator-button"
                 onClick={generateAnalogousColors}
                 type="submit">
                 Generate colors 

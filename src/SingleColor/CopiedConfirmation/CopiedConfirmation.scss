@@ -1,0 +1,11 @@
+.copied-confirmation {
+
+    p {
+        font-size: 12px;
+
+        @media (min-width: 1024px) {
+            font-size: 14px;
+        }
+    }
+    
+}

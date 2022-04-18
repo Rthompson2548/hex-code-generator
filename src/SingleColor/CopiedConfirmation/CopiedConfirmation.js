@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../../App.scss";
+import "./CopiedConfirmation.scss";
+
 const CopiedConfirmation = ({ formattedHexCode, index }) => {
 
     const [copiedToClipboard, setCopiedToClipboard] = useState(false);
@@ -21,15 +23,13 @@ const CopiedConfirmation = ({ formattedHexCode, index }) => {
   }, [copiedToClipboard])
     
     return (
-        <div className="copied-confirmation">
-            
-            
+        <div className="copied-confirmation">                      
             <i onClick={handleCopiedToClipboard} className={`fa fa-paperclip color ${index > 10 && 'white-text'}`} >               
             </i>
             
             <div>
                 {copiedToClipboard &&
-                    <p className="copied-confirmation">Copied</p>}
+                    <p className="confirmation-msg">Copied</p>}
           </div>
         </div>
     )

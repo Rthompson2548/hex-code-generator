@@ -1,8 +1,10 @@
 .generate-colors {
-    button {
-        padding: 8px 72px;
-    }
 
+    .generator-button {
+        background-color: #3E00FF;
+        padding: 10px 40px;
+    }
+  
     .colorValueError h3 {
         text-align: center;
     }
