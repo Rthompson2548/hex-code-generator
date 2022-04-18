@@ -8,10 +8,7 @@ const GenerateColors = ({ hexCode, setHexCode, setHexCodeList }) => {
 
     const [inputValueError, setInputValueError] = useState(false);
 
-    const generateAnalogousColors =  (event) => {
-           
-        const validateInputValue = () => {
-
+    const validateInputValue = () => {
             if (hexCode.length > 0) {
                 let colorNameValue = new Option().style;
                 colorNameValue.color = hexCode;
@@ -33,6 +30,8 @@ const GenerateColors = ({ hexCode, setHexCode, setHexCodeList }) => {
             
     }
 
+    const generateAnalogousColors =  (event) => {
+    
             event.preventDefault();
             validateInputValue();
             
