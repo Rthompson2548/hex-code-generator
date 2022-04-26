@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Values from "values.js";
 import "../../App.scss";
 import "./GenerateColors.scss";
 import { generateAnalogousColors, validateInputValue } from "../../utils.js"
