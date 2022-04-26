@@ -13,7 +13,9 @@ const HexGenerator = () => {
 
   const handleHexCodeState = (event) => {
     event.preventDefault();
+    
     setHexCode(event.target.value); 
+    console.log(`input value: ${event.target.value}`);
   }
 
   return (
@@ -23,7 +25,7 @@ const HexGenerator = () => {
       <div className='hex-generator-form'>               
         <input
             /** disables dropdown menu of suggestions upon clicking on the input field */
-            autocomplete="off"
+            autoComplete="off"
             type="text"
             id="hex-code"
             name={hexCode}

@@ -1,7 +1,8 @@
 import Values from "values.js";
 
 export function validateInputValue(hexCode) {
-        console.log(hexCode)
+            
+            console.log(`running validateInputValue on ${hexCode}`)
             if (!!hexCode && hexCode.length > 0) {
                 
                 // 
