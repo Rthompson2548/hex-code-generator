@@ -1,34 +1,25 @@
 import Values from "values.js";
 
-export function validateInputValue(hexCode, setHexCode, setInputValueError) {
-            if (hexCode.length > 0) {
-                let colorNameValue = new Option().style;
-                colorNameValue.color = hexCode;
-                let validColorName = colorNameValue.color === hexCode;
-                    
-                let regExHexCodePattern = /^#[0-9A-F]{6}$/i;
-                let validHexCode = regExHexCodePattern.test(hexCode);
-                    
-                if (validColorName === true || validHexCode === true) {
-                    setInputValueError(false);
+export function validateInputValue(hexCode) {
+        console.log(hexCode)
+            if (!!hexCode && hexCode.length > 0) {
                 
-                } else {
-                    setInputValueError(true); 
-                    setHexCode("");
-                }        
-            } else {
-                setInputValueError(true);
+                // 
+                
+                const colorNameValue = new Option().style;
+                colorNameValue.color = hexCode;
+                const isValidColorName = colorNameValue.color === hexCode;
+                    
+                const regExHexCodePattern = /^#[0-9A-F]{6}$/i;
+                const isValidHexCode = regExHexCodePattern.test(hexCode);
+                // 
+                return !!isValidColorName || !!isValidHexCode;
             } 
-};
-
-export function generateAnalogousColors (event, hexCode, setHexCode, setHexCodeList) {
-    
-            event.preventDefault();
-            validateInputValue();
             
-            let hexCodes = new Values(hexCode).all(10);
-            setHexCodeList(hexCodes);            
-            setHexCode("");
-      
+            return false;           
 };
 
+export function generateAnalogousColors (hexCode) {                 
+    const hexCodes = new Values(hexCode).all(10);  
+    return hexCodes;
+};

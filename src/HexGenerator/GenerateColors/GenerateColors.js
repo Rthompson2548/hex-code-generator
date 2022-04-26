@@ -1,57 +1,41 @@
 import React, { useState } from "react";
 import Values from "values.js";
 import "../../App.scss";
-import "./GenerateColors.scss"
-// import { generateAnalogousColors } from "../../utils.js"
+import "./GenerateColors.scss";
+import { generateAnalogousColors, validateInputValue } from "../../utils.js"
 
 const GenerateColors = ({ hexCode, setHexCode, setHexCodeList }) => {
 
-    const [inputValueError, setInputValueError] = useState(false);
+    const [inputValueError, setInputValueError] = useState(false);   
+    console.log(`input value error: ${inputValueError}`);
 
-    /** to do: move validateInputValue() and generateAnalogousColors() into a separate file */
-    const validateInputValue = () => {
-            if (hexCode.length > 0) {
-                let colorNameValue = new Option().style;
-                colorNameValue.color = hexCode;
-                let validColorName = colorNameValue.color === hexCode;
-                    
-                let regExHexCodePattern = /^#[0-9A-F]{6}$/i;
-                let validHexCode = regExHexCodePattern.test(hexCode);
-                    
-                if (validColorName === true || validHexCode === true) {
-                    setInputValueError(false);
-                
-                } else {
-                    setInputValueError(true); 
-                    setHexCode("");
-                }        
-            } else {
-                setInputValueError(true);
-            }
-            
-    }
+    const handleGenerateButtonClick = (e) => {
+        e.preventDefault();
+        const newHexCode = e.target.value;
+        const isValueValid = validateInputValue(newHexCode);
 
-    const generateAnalogousColors =  (event) => {
-    
-            event.preventDefault();
-            validateInputValue();
-            
-            let hexCodes = new Values(hexCode).all(10);
-            setHexCodeList(hexCodes);            
-            setHexCode("");
-      
+        if (!!isValueValid) {
+            const analogousColors = generateAnalogousColors(newHexCode);
+            setHexCodeList(analogousColors);
+            setHexCode(newHexCode);
+            setInputValueError(false);
+        } else {
+            setInputValueError(true);
+        }
+
+       
     }
 
     return (
         <div className="generate-colors">                      
             <button
                 className="generator-button"
-                onClick={generateAnalogousColors}
+                onClick={handleGenerateButtonClick}
                 type="submit">
                 Generate colors 
             </button>
             
-            {inputValueError === true && (
+            {!!inputValueError && (
                 <div className="colorValueError">
                     <h3>Error: Please enter a <a href="https://www.pluralsight.com/blog/tutorials/understanding-hexadecimal-colors-simple#:~:text=Hex%20color%20codes%20start%20with,0%20to%20255%20in%20RGB)." target="_blank" rel="noopener noreferrer">valid hex code</a> or <a href="https://www.w3schools.com/tags/ref_colornames.asp" target="_blank" rel="noopener noreferrer">color name</a>.</h3> 
                     <button id="confirmErrorMessage" onClick={() => setInputValueError(false)}>Okay</button>
