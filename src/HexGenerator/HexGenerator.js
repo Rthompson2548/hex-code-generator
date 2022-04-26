@@ -15,7 +15,6 @@ const HexGenerator = () => {
     event.preventDefault();
     
     setHexCode(event.target.value); 
-    console.log(`input value: ${event.target.value}`);
   }
 
   return (
@@ -45,7 +44,7 @@ const HexGenerator = () => {
       
         <section className="color-list">
           {
-            hexCodeList.map((color, index) => {
+          hexCodeList.map((color, index) => {
               return (
                 <SingleColor
                   key={index}

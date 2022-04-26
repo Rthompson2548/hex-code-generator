@@ -14,9 +14,10 @@ const GenerateColors = ({ hexCode, setHexCode, setHexCodeList }) => {
         if (!!isValueValid) {
             const analogousColors = generateAnalogousColors(hexCode);
             setHexCodeList(analogousColors);
-            setHexCode(hexCode);
+            setHexCode("");
             setInputValueError(false);
-        } else {        
+        } else {       
+            setHexCode("");
             setInputValueError(true);
         }
 

@@ -2,10 +2,7 @@ import Values from "values.js";
 
 export function validateInputValue(hexCode) {
             
-            console.log(`running validateInputValue on ${hexCode}`)
             if (!!hexCode && hexCode.length > 0) {
-                
-                // 
                 
                 const colorNameValue = new Option().style;
                 colorNameValue.color = hexCode;
@@ -13,7 +10,6 @@ export function validateInputValue(hexCode) {
                     
                 const regExHexCodePattern = /^#[0-9A-F]{6}$/i;
                 const isValidHexCode = regExHexCodePattern.test(hexCode);
-                // 
                 return !!isValidColorName || !!isValidHexCode;
             } 
             
