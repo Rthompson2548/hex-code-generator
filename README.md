@@ -46,11 +46,6 @@ Desktop View
 Color Palette View
 ![colors-view](https://user-images.githubusercontent.com/80596387/163723046-71bbfefe-bda5-40b8-9f04-c2c28fa446de.PNG)
 
-Copied to Clipboard Confirmation Message
-
-
-![copied-to-clipboard](https://user-images.githubusercontent.com/80596387/163723864-dc863846-276d-46e1-8a34-23596a147a53.PNG)
-
 ## Future Improvements
 - [ ] Implement a feature that allows the user to generate an analogous color palette from a random color
 - [ ] Implement a feature that allows the user to generate a complementary color palette from a random color
