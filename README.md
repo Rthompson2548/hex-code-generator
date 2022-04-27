@@ -47,9 +47,9 @@ Color Palette View
 ![colors-view](https://user-images.githubusercontent.com/80596387/163723046-71bbfefe-bda5-40b8-9f04-c2c28fa446de.PNG)
 
 ## Future Improvements
-- [ ] Implement a feature that allows the user to generate an analogous color palette from a random color
-- [ ] Implement a feature that allows the user to generate a complementary color palette from a random color
-- [ ] Implement a feature that allows the user to select from a list of common colors in place of entering a code or color in the input field
+- [ ] Implement a feature that allows the user to choose the number of analogous colors they would like to generate.
+- [ ] Implement a feature that allows the user to generate an analogous color palette from a random color.
+- [ ] Implement a feature that allows the user to generate a complementary color palette from a random color.
 
 ## Parting Words
 

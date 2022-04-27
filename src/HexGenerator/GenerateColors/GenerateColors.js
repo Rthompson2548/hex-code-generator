@@ -10,7 +10,6 @@ const GenerateColors = ({ hexCode, setHexCode, setHexCodeList }) => {
         const isValueValid = validateInputValue(hexCode);
         if (!!isValueValid) {
             const analogousColors = generateAnalogousColors(hexCode);
-            console.log(`an`)
             setHexCodeList(analogousColors);
             setHexCode("");
             setInputValueError(false);
