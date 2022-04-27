@@ -18,6 +18,5 @@ export function validateInputValue(hexCode) {
 export function generateAnalogousColors(hexCode) {
   /** utilizes values.js to generate a palette of tinted colors in intervals of 5% */
   const hexCodes = new Values(hexCode).all(5);
-  console.log(Object.entries(hexCodes));
   return hexCodes;
 }
