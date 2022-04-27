@@ -1,8 +1,7 @@
 # Hex Palette Generator by Reilly Thompson
 
 ## Description
-
-This project uses a JavaScript library to generate analogous colors from a hex code value, and provides a copyable hex code and a tint percentage for each. 
+The Hex Palette Generator allows users to create analogous color schemes from a provided hex code value. The colors are displayed in cards on the user interface, which include information about their tint values going from lightest to darkest from the original color. Furthermore, the cards display their hex code values, which are copyable upon clicking the clipboard icon. 
 
 Hosted on Vercel at https://hex-code-generator.vercel.app/
 
