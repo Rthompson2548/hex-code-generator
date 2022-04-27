@@ -4,13 +4,13 @@ import CopiedConfirmation from './CopiedConfirmation';
 
 const SingleColor = ({ rgb, weight, index, hexCode }) => {
   
-  const rgbString = rgb.join(",");
+  const HexCodeString = rgb.join(",");
   const formattedHexCode = `#${hexCode}`;
-
+  
   return (
     <div
       className={`single-color-container color ${index > 10 && 'white-text'}`}
-      style={{ backgroundColor: `rgb(${rgbString})` }}
+      style={{ backgroundColor: `rgb(${HexCodeString})` }}
     >
       <div className="single-color-information">
         <div>

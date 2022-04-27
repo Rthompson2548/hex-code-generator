@@ -12,8 +12,7 @@ export function validateInputValue(hexCode) {
     const isValidHexCode = regExHexCodePattern.test(hexCode);
     return !!isValidColorName || !!isValidHexCode;
   }
-
-  return false;
+    return false;
 }
 
 export function generateAnalogousColors(hexCode) {

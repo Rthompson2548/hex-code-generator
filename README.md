@@ -1,7 +1,7 @@
 # Hex Palette Generator by Reilly Thompson
 
 ## Description
-The Hex Palette Generator allows users to create analogous color schemes from a provided hex code value. The colors are displayed as cards on the user interface, which include their tint weight as a percentage compared to the original color from lightest to darkest. Furthermore, the cards display their hex code values, which are copyable upon clicking the clipboard icon. 
+The Hex Palette Generator allows users to create analogous color schemes from a provided hex code value or color name. The colors are displayed as cards on the user interface, which include their tint weight as a percentage compared to the original color from lightest to darkest. Furthermore, the cards display their hex code values, which are copyable upon clicking the clipboard icon.
 
 Hosted on Vercel at https://hex-code-generator.vercel.app/
 

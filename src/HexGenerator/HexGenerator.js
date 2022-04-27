@@ -12,8 +12,7 @@ const HexGenerator = () => {
   const [hexCodeList, setHexCodeList] = useState(new Values("#ff0000").all(5));
 
   const handleHexCodeState = (event) => {
-    event.preventDefault();
-    
+    event.preventDefault(); 
     setHexCode(event.target.value); 
   }
 
